@@ -1,0 +1,423 @@
+body[data-bs-theme="dark"] {
+    --eaduems-moodle-light-surface: #ffffff;
+    --eaduems-moodle-light-surface-soft: #f7faf8;
+    --eaduems-moodle-light-text: #163224;
+    --eaduems-moodle-light-muted: var(--eaduems-color-muted-on-light-surface);
+    --eaduems-moodle-light-border: rgba(22, 50, 36, 0.18);
+    --eaduems-moodle-light-link: #08703e;
+    --eaduems-moodle-light-link-hover: #064625;
+}
+
+body[data-bs-theme="dark"] #region-main,
+body[data-bs-theme="dark"] #region-main-box,
+body[data-bs-theme="dark"] .main-inner,
+body[data-bs-theme="dark"] .adminsearchform,
+body[data-bs-theme="dark"] .settingsform,
+body[data-bs-theme="dark"] .backup-section,
+body[data-bs-theme="dark"] .restore-section,
+body[data-bs-theme="dark"] .boxaligncenter,
+body[data-bs-theme="dark"] .box.generalbox:not(.alert) {
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main h1,
+body[data-bs-theme="dark"] #region-main h2,
+body[data-bs-theme="dark"] #region-main h3,
+body[data-bs-theme="dark"] #region-main h4,
+body[data-bs-theme="dark"] #region-main h5,
+body[data-bs-theme="dark"] #region-main h6,
+body[data-bs-theme="dark"] #region-main legend,
+body[data-bs-theme="dark"] #region-main label,
+body[data-bs-theme="dark"] #region-main .col-form-label,
+body[data-bs-theme="dark"] #region-main .form-label,
+body[data-bs-theme="dark"] #region-main .form-check-label,
+body[data-bs-theme="dark"] #region-main .form-description,
+body[data-bs-theme="dark"] #region-main .form-defaultinfo,
+body[data-bs-theme="dark"] #region-main .fdescription,
+body[data-bs-theme="dark"] #region-main .fp-restrictions,
+body[data-bs-theme="dark"] #region-main .path-backup .backup-section,
+body[data-bs-theme="dark"] #region-main .path-backup .restore-section,
+body[data-bs-theme="dark"] #region-main .path-backup .backup-restore,
+body[data-bs-theme="dark"] #region-main .path-backup .backup-restore .detail-pair,
+body[data-bs-theme="dark"] #region-main .path-backup .backup-restore .detail-pair .value,
+body[data-bs-theme="dark"] #region-main .questionbankwindow,
+body[data-bs-theme="dark"] #region-main .contentbank-container {
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main .text-muted,
+body[data-bs-theme="dark"] #region-main .dimmed,
+body[data-bs-theme="dark"] #region-main .dimmed_text,
+body[data-bs-theme="dark"] #region-main .form-text,
+body[data-bs-theme="dark"] #region-main .form-help,
+body[data-bs-theme="dark"] #region-main .form-setting .form-shortname,
+body[data-bs-theme="dark"] #region-main .description,
+body[data-bs-theme="dark"] #region-main .path-backup .backup-section .description {
+    color: var(--eaduems-moodle-light-muted) !important;
+}
+
+/* ANTM-01: native administrative table metadata remains legible on light surfaces. */
+body[data-bs-theme="dark"] #region-main .componentname,
+body[data-bs-theme="dark"] #region-main .versionnumber,
+body[data-bs-theme="dark"] #region-main .requiredby {
+    color: var(--eaduems-moodle-light-muted) !important;
+    -webkit-text-fill-color: var(--eaduems-moodle-light-muted) !important;
+}
+body[data-bs-theme="dark"] #region-main a:not(.btn):not(.nav-link):not(.dropdown-item),
+body[data-bs-theme="dark"] .breadcrumb a:not(.btn),
+body[data-bs-theme="dark"] .page-context-header a:not(.btn) {
+    color: var(--eaduems-moodle-light-link);
+}
+
+body[data-bs-theme="dark"] #region-main a:not(.btn):not(.nav-link):not(.dropdown-item):hover,
+body[data-bs-theme="dark"] #region-main a:not(.btn):not(.nav-link):not(.dropdown-item):focus,
+body[data-bs-theme="dark"] .breadcrumb a:not(.btn):hover,
+body[data-bs-theme="dark"] .breadcrumb a:not(.btn):focus {
+    color: var(--eaduems-moodle-light-link-hover);
+    text-decoration: underline;
+}
+
+/* ANST-01: native-link focus on preserved light Moodle surfaces. */
+body[data-bs-theme="dark"] #region-main a:not(.btn):not(.nav-link):not(.dropdown-item):focus-visible,
+body[data-bs-theme="dark"] .breadcrumb a:not(.btn):focus-visible,
+body[data-bs-theme="dark"] .page-context-header a:not(.btn):focus-visible {
+    background-color: rgba(15, 111, 60, 0.12) !important;
+    border-radius: var(--eaduems-radius-xs);
+    color: var(--eaduems-moodle-light-link-hover) !important;
+    outline: 2px solid var(--eaduems-moodle-light-link-hover);
+    outline-offset: 2px;
+}
+/* NIS-03: shared keyboard-focus contract for native Moodle buttons. */
+body[data-bs-theme="dark"] #region-main .btn:not(.dropdown-toggle):focus-visible,
+body[data-bs-theme="dark"] #region-main button:not(.dropdown-toggle):focus-visible,
+body[data-bs-theme="dark"] #region-main input[type="submit"]:focus-visible,
+body[data-bs-theme="dark"] #region-main input[type="button"]:focus-visible,
+body[data-bs-theme="dark"] #region-main input[type="reset"]:focus-visible {
+    box-shadow: 0 0 0 0.2rem rgba(158, 234, 249, 0.42) !important;
+    outline: 2px solid #9eeaf9 !important;
+    outline-offset: 2px;
+}
+body[data-bs-theme="dark"] #region-main table,
+body[data-bs-theme="dark"] #region-main .table,
+body[data-bs-theme="dark"] #region-main .generaltable,
+body[data-bs-theme="dark"] #region-main .flexible,
+body[data-bs-theme="dark"] #region-main .rolecap {
+    --bs-table-color: var(--eaduems-moodle-light-text);
+    --bs-table-bg: transparent;
+    --bs-table-border-color: var(--eaduems-moodle-light-border);
+    --bs-table-striped-color: var(--eaduems-moodle-light-text);
+    --bs-table-striped-bg: rgba(22, 50, 36, 0.035);
+    --bs-table-hover-color: var(--eaduems-moodle-light-text);
+    --bs-table-hover-bg: rgba(15, 111, 60, 0.08);
+    border-color: var(--eaduems-moodle-light-border);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main table th,
+body[data-bs-theme="dark"] #region-main table td,
+body[data-bs-theme="dark"] #region-main .table th,
+body[data-bs-theme="dark"] #region-main .table td,
+body[data-bs-theme="dark"] #region-main .generaltable th,
+body[data-bs-theme="dark"] #region-main .generaltable td,
+body[data-bs-theme="dark"] #region-main .rolecap th,
+body[data-bs-theme="dark"] #region-main .rolecap td {
+    border-color: var(--eaduems-moodle-light-border);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main table thead th,
+body[data-bs-theme="dark"] #region-main .table thead th,
+body[data-bs-theme="dark"] #region-main .generaltable thead th,
+body[data-bs-theme="dark"] #region-main .rolecap thead th {
+    background: var(--eaduems-moodle-light-surface-soft);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main .breadcrumb,
+body[data-bs-theme="dark"] #region-main .breadcrumb-item,
+body[data-bs-theme="dark"] #region-main .breadcrumb-item.active,
+body[data-bs-theme="dark"] #region-main .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--eaduems-moodle-light-muted);
+}
+
+body[data-bs-theme="dark"] #region-main .secondary-navigation,
+body[data-bs-theme="dark"] #region-main .tertiary-navigation,
+body[data-bs-theme="dark"] #region-main .nav-tabs,
+body[data-bs-theme="dark"] #region-main .nav-pills {
+    border-color: var(--eaduems-moodle-light-border);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main .secondary-navigation .nav-link,
+body[data-bs-theme="dark"] #region-main .tertiary-navigation .nav-link,
+body[data-bs-theme="dark"] #region-main .nav-tabs .nav-link,
+body[data-bs-theme="dark"] #region-main .nav-pills .nav-link {
+    color: var(--eaduems-moodle-light-link);
+}
+
+body[data-bs-theme="dark"] #region-main .secondary-navigation .nav-link.active,
+body[data-bs-theme="dark"] #region-main .tertiary-navigation .nav-link.active,
+body[data-bs-theme="dark"] #region-main .nav-tabs .nav-link.active,
+body[data-bs-theme="dark"] #region-main .nav-pills .nav-link.active {
+    background: var(--eaduems-moodle-light-surface);
+    border-color: var(--eaduems-moodle-light-border);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main .mform fieldset,
+body[data-bs-theme="dark"] #region-main .form-group,
+body[data-bs-theme="dark"] #region-main .fitem,
+body[data-bs-theme="dark"] #region-main .collapsible-actions,
+body[data-bs-theme="dark"] #region-main .initialbar,
+body[data-bs-theme="dark"] #region-main .filemanager,
+body[data-bs-theme="dark"] #region-main .filepicker-filelist,
+body[data-bs-theme="dark"] #region-main .filemanager-container,
+body[data-bs-theme="dark"] #region-main .fp-content,
+body[data-bs-theme="dark"] #region-main .contentbank-container,
+body[data-bs-theme="dark"] #region-main .questionbankwindow {
+    border-color: var(--eaduems-moodle-light-border);
+    color: var(--eaduems-moodle-light-text);
+}
+
+body[data-bs-theme="dark"] #region-main .card {
+    border-color: var(--eaduems-border);
+}
+
+body[data-bs-theme="dark"] #region-main .card h1,
+body[data-bs-theme="dark"] #region-main .card h2,
+body[data-bs-theme="dark"] #region-main .card h3,
+body[data-bs-theme="dark"] #region-main .card h4,
+body[data-bs-theme="dark"] #region-main .card h5,
+body[data-bs-theme="dark"] #region-main .card h6 {
+    color: inherit;
+}
+
+/* NIS-01: shared dark interaction contract for native Moodle dropdowns. */
+body[data-bs-theme="dark"] #region-main .dropdown-toggle,
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle {
+    border-color: var(--eaduems-moodle-light-border);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-toggle:hover,
+body[data-bs-theme="dark"] #region-main .dropdown-toggle:focus,
+body[data-bs-theme="dark"] #region-main .dropdown-toggle[aria-expanded="true"] {
+    background-color: rgba(15, 111, 60, 0.22);
+    border-color: #9eeaf9;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-toggle:focus-visible {
+    outline: 2px solid #9eeaf9;
+    outline-offset: 2px;
+}
+
+/* ANDT-01: combobox triggers remain readable on preserved light Moodle surfaces. */
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle[role="combobox"] {
+    background-color: var(--eaduems-moodle-light-surface) !important;
+    border-color: var(--eaduems-moodle-light-border) !important;
+    color: var(--eaduems-moodle-light-text) !important;
+    -webkit-text-fill-color: var(--eaduems-moodle-light-text) !important;
+}
+
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle[role="combobox"]:hover,
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle[role="combobox"]:focus,
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle[role="combobox"][aria-expanded="true"] {
+    background-color: var(--eaduems-moodle-light-surface-soft) !important;
+    border-color: var(--eaduems-moodle-light-link) !important;
+    color: var(--eaduems-moodle-light-link-hover) !important;
+    -webkit-text-fill-color: var(--eaduems-moodle-light-link-hover) !important;
+}
+
+body[data-bs-theme="dark"] #region-main .select-menu .btn.dropdown-toggle[role="combobox"]:focus-visible {
+    outline: 2px solid var(--eaduems-moodle-light-link-hover) !important;
+    outline-offset: 2px;
+}
+
+/* NIS-02: tertiary-navigation selectors live on the native dark content surface. */
+body[data-bs-theme="dark"] #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"] {
+    background-color: var(--eaduems-color-surface) !important;
+    border-color: var(--eaduems-color-border) !important;
+    color: var(--eaduems-color-text-inverse) !important;
+    -webkit-text-fill-color: var(--eaduems-color-text-inverse) !important;
+}
+
+body[data-bs-theme="dark"] #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"]:hover,
+body[data-bs-theme="dark"] #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"]:focus,
+body[data-bs-theme="dark"] #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"][aria-expanded="true"] {
+    background-color: var(--eaduems-color-action-primary-hover-bg) !important;
+    border-color: var(--eaduems-color-accent) !important;
+    color: var(--eaduems-color-text-inverse) !important;
+    -webkit-text-fill-color: var(--eaduems-color-text-inverse) !important;
+}
+
+body[data-bs-theme="dark"] #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"]:focus-visible {
+    outline: 2px solid var(--eaduems-color-accent) !important;
+    outline-offset: 2px;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-menu {
+    background-color: #212529;
+    border-color: #495057;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-menu .dropdown-item {
+    color: #ffffff;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-menu .dropdown-item:hover,
+body[data-bs-theme="dark"] #region-main .dropdown-menu .dropdown-item:focus,
+body[data-bs-theme="dark"] #region-main .dropdown-menu .dropdown-item.active {
+    background-color: #0f6f3c;
+    color: #ffffff;
+}
+/* NIS-01b: native filter panels use buttons and labels instead of dropdown-item. */
+body[data-bs-theme="dark"] #region-main .dropdown-menu,
+body[data-bs-theme="dark"] #region-main .dropdown-menu label,
+body[data-bs-theme="dark"] #region-main .dropdown-menu legend,
+body[data-bs-theme="dark"] #region-main .dropdown-menu .form-label {
+    color: #ffffff !important;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-menu .btn,
+body[data-bs-theme="dark"] #region-main .dropdown-menu button,
+body[data-bs-theme="dark"] #region-main .dropdown-menu a:not(.dropdown-item) {
+    border-color: #6c757d;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body[data-bs-theme="dark"] #region-main .dropdown-menu .btn:hover,
+body[data-bs-theme="dark"] #region-main .dropdown-menu .btn:focus,
+body[data-bs-theme="dark"] #region-main .dropdown-menu button:hover,
+body[data-bs-theme="dark"] #region-main .dropdown-menu button:focus,
+body[data-bs-theme="dark"] #region-main .dropdown-menu a:not(.dropdown-item):hover,
+body[data-bs-theme="dark"] #region-main .dropdown-menu a:not(.dropdown-item):focus {
+    background-color: rgba(15, 111, 60, 0.45);
+    border-color: #9eeaf9;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+/* NIS-01b: Moodle initialsdropdown is a reusable alphabet-filter component. */
+body[data-bs-theme="dark"] #region-main .initialsdropdown {
+    background-color: #212529;
+    border-color: #495057;
+    color: #ffffff;
+}
+
+body[data-bs-theme="dark"] #region-main .initialsdropdown .initialbarlabel,
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.page-link {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.page-link {
+    background-color: transparent;
+    border-color: #6c757d;
+}
+
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.page-link:hover,
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.page-link:focus,
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.page-link:focus-visible {
+    background-color: rgba(15, 111, 60, 0.45);
+    border-color: #9eeaf9;
+    color: #ffffff !important;
+    outline: 2px solid #9eeaf9;
+    outline-offset: 2px;
+}
+
+body[data-bs-theme="dark"] #region-main .initialsdropdown .page-item.active input.page-link,
+body[data-bs-theme="dark"] #region-main .initialsdropdown input.dropdown-item-active {
+    background-color: #0f6f3c;
+    border-color: #0f6f3c;
+    color: #ffffff !important;
+}
+
+/* MNDC2-15: left and right native drawer launchers stay visible on dark page backgrounds. */
+body[data-bs-theme="dark"] .drawer-toggler button[data-toggler="drawers"][data-action="toggle"] {
+    background-color: var(--eaduems-color-action-secondary-bg) !important;
+    border-color: var(--eaduems-color-border-on-dark) !important;
+    color: var(--eaduems-color-text-on-dark) !important;
+}
+
+body[data-bs-theme="dark"] .drawer-toggler button[data-toggler="drawers"][data-action="toggle"] .icon {
+    color: inherit !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+body[data-bs-theme="dark"] .drawer-toggler button[data-toggler="drawers"][data-action="toggle"]:hover,
+body[data-bs-theme="dark"] .drawer-toggler button[data-toggler="drawers"][data-action="toggle"]:focus-visible {
+    background-color: var(--eaduems-color-action-primary-hover-bg) !important;
+    border-color: var(--eaduems-color-accent) !important;
+    color: var(--eaduems-color-text-on-brand) !important;
+}
+
+/* MNDC2-16: backup progress runs on a preserved light Moodle surface in dark mode. */
+body[data-bs-theme="dark"] #region-main .backup_progress {
+    color: var(--eaduems-color-on-light-surface);
+}
+
+body[data-bs-theme="dark"] #region-main .backup_progress .backup_stage,
+body[data-bs-theme="dark"] #region-main .backup_progress .arrow {
+    color: var(--eaduems-color-muted-on-light-surface);
+}
+
+body[data-bs-theme="dark"] #region-main .backup_progress .backup_stage.backup_stage_current {
+    color: var(--eaduems-color-on-light-surface);
+    font-weight: var(--eaduems-font-weight-semibold);
+}
+/* ANCT-01: administrative native selects preserve their established dark surface through aliases. */
+body[data-bs-theme="dark"][id^="page-admin-"] #region-main select:not([multiple]) {
+    background-color: var(--eaduems-native-admin-select-bg);
+    border-color: var(--eaduems-native-admin-select-border);
+    color: var(--eaduems-native-admin-select-text);
+    -webkit-text-fill-color: var(--eaduems-native-admin-select-text);
+}
+
+/* ANCT-02: administrative secondary actions preserve their approved neutral treatment. */
+body[data-bs-theme="dark"][id^="page-admin-"] #region-main .btn.btn-secondary {
+    background-color: var(--eaduems-native-admin-secondary-action-bg);
+    border-color: var(--eaduems-native-admin-secondary-action-border);
+    color: var(--eaduems-native-admin-secondary-action-text);
+    -webkit-text-fill-color: var(--eaduems-native-admin-secondary-action-text);
+}
+
+/* ANCT-03: administrative text fields preserve the approved dark control treatment. */
+body[data-bs-theme="dark"][id^="page-admin-"] #region-main input.form-control:not([type="checkbox"]):not([type="radio"]),
+body[data-bs-theme="dark"][id^="page-admin-"] #region-main textarea.form-control {
+    background-color: var(--eaduems-native-admin-field-bg);
+    border-color: var(--eaduems-native-admin-field-border);
+    color: var(--eaduems-native-admin-field-text);
+    -webkit-text-fill-color: var(--eaduems-native-admin-field-text);
+}
+/* ANTAB-01: theme admin setting tabs preserve semantic contrast on dark mode. */
+body[data-bs-theme="dark"] #adminsettings .nav-tabs .nav-link {
+    background-color: var(--eaduems-theme-settings-tab-inactive-bg) !important;
+    border-color: var(--eaduems-theme-settings-tab-inactive-border) !important;
+    color: var(--eaduems-theme-settings-tab-inactive-text) !important;
+    -webkit-text-fill-color: var(--eaduems-theme-settings-tab-inactive-text) !important;
+}
+
+body[data-bs-theme="dark"] #adminsettings .nav-tabs .nav-link:not(.active):hover,
+body[data-bs-theme="dark"] #adminsettings .nav-tabs .nav-link:not(.active):focus-visible {
+    background-color: var(--eaduems-theme-settings-tab-hover-bg) !important;
+    border-color: var(--eaduems-color-accent) !important;
+    color: var(--eaduems-theme-settings-tab-hover-text) !important;
+    -webkit-text-fill-color: var(--eaduems-theme-settings-tab-hover-text) !important;
+}
+
+body[data-bs-theme="dark"] #adminsettings .nav-tabs .nav-link.active,
+body[data-bs-theme="dark"] #adminsettings .nav-tabs .nav-link[aria-selected="true"] {
+    background-color: var(--eaduems-theme-settings-tab-active-bg) !important;
+    border-color: var(--eaduems-theme-settings-tab-active-border) !important;
+    color: var(--eaduems-theme-settings-tab-active-text) !important;
+    -webkit-text-fill-color: var(--eaduems-theme-settings-tab-active-text) !important;
+}
+/* NLS-01: Timeline skeletons use a subdued neutral surface on dark panels. */
+body[data-bs-theme="dark"] #region-main .block_timeline [data-region="event-list-loading-placeholder"] .bg-pulse-grey,
+body[data-bs-theme="dark"] #region-main .block_timeline [data-region="course-items-loading-placeholder"] .bg-pulse-grey {
+    background-color: var(--eaduems-native-loading-placeholder-bg) !important;
+    opacity: var(--eaduems-native-loading-placeholder-opacity);
+}

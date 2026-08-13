@@ -1,0 +1,91 @@
+.theme-eaduems-button {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: var(--eaduems-button-radius);
+    display: inline-flex;
+    font-weight: var(--eaduems-button-font-weight);
+    gap: 0.5rem;
+    justify-content: center;
+    line-height: var(--eaduems-button-line-height);
+    min-height: var(--eaduems-button-min-height);
+    padding: var(--eaduems-button-padding-y) var(--eaduems-button-padding-x);
+    text-decoration: none;
+    transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.theme-eaduems-button:hover,
+.theme-eaduems-button:focus {
+    text-decoration: none;
+}
+
+.theme-eaduems-button:focus-visible {
+    box-shadow: 0 0 0 0.2rem var(--eaduems-button-focus-ring);
+    outline: 0;
+}
+
+.theme-eaduems-button:active {
+    transform: translateY(1px);
+}
+
+.theme-eaduems-button[aria-disabled="true"],
+.theme-eaduems-button:disabled {
+    cursor: not-allowed;
+    opacity: var(--eaduems-button-disabled-opacity);
+    pointer-events: none;
+}
+
+.theme-eaduems-button--primary {
+    background: var(--eaduems-button-primary-bg);
+    border-color: var(--eaduems-button-primary-border);
+    color: var(--eaduems-button-primary-text);
+}
+
+.theme-eaduems-button--primary:hover,
+.theme-eaduems-button--primary:focus {
+    background: var(--eaduems-button-primary-hover-bg);
+    border-color: var(--eaduems-button-primary-hover-border);
+    color: var(--eaduems-button-primary-hover-text);
+    transform: translateY(-1px);
+}
+
+.theme-eaduems-button--secondary {
+    background: var(--eaduems-button-secondary-bg);
+    border-color: var(--eaduems-button-secondary-border);
+    color: var(--eaduems-button-secondary-text);
+}
+
+.theme-eaduems-button--secondary:hover,
+.theme-eaduems-button--secondary:focus {
+    background: var(--eaduems-button-secondary-hover-bg);
+    border-color: var(--eaduems-button-secondary-hover-border);
+    color: var(--eaduems-button-secondary-hover-text);
+    transform: translateY(-1px);
+}
+
+/* DCTA-02: first native consumer of the dark color token contract. */
+body#page-course-view-participants #region-main .btn.btn-primary,
+body#page-course-view-participants .enrolusersbutton .btn.btn-primary {
+    background-color: var(--eaduems-color-action-primary-bg);
+    border-color: var(--eaduems-color-action-primary-bg);
+    color: var(--eaduems-color-action-primary-text);
+}
+
+body#page-course-view-participants #region-main .btn.btn-primary .icon,
+body#page-course-view-participants .enrolusersbutton .btn.btn-primary .icon {
+    color: inherit;
+}
+
+body#page-course-view-participants #region-main .btn.btn-primary:not(:disabled):not(.disabled):hover,
+body#page-course-view-participants #region-main .btn.btn-primary:not(:disabled):not(.disabled):focus,
+body#page-course-view-participants .enrolusersbutton .btn.btn-primary:not(:disabled):not(.disabled):hover,
+body#page-course-view-participants .enrolusersbutton .btn.btn-primary:not(:disabled):not(.disabled):focus {
+    background-color: var(--eaduems-color-action-primary-hover-bg);
+    border-color: var(--eaduems-color-action-primary-hover-bg);
+    color: var(--eaduems-color-action-primary-text);
+}
+
+body#page-course-view-participants #region-main .btn.btn-primary:focus-visible,
+body#page-course-view-participants .enrolusersbutton .btn.btn-primary:focus-visible {
+    outline: 2px solid var(--eaduems-color-focus-border);
+    outline-offset: 2px;
+}

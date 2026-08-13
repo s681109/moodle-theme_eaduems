@@ -1,0 +1,157 @@
+.theme-eaduems-footer {
+    background: var(--eaduems-footer-bg);
+    color: var(--eaduems-footer-text);
+    padding: var(--eaduems-footer-padding);
+}
+
+.theme-eaduems-footer__inner {
+    display: grid;
+    gap: var(--eaduems-footer-inner-gap);
+    grid-template-columns: 1.4fr 1fr 1fr;
+}
+
+.theme-eaduems-footer__brand {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--eaduems-footer-brand-gap);
+}
+
+.theme-eaduems-footer__logo {
+    display: block;
+    height: auto;
+    max-height: 68px;
+    max-width: 320px;
+    object-fit: contain;
+}
+
+.theme-eaduems-footer__brand > div {
+    max-width: 26rem;
+}
+
+.theme-eaduems-footer__brand h2 {
+    color: var(--eaduems-footer-heading);
+    line-height: var(--eaduems-footer-heading-line-height);
+    margin: var(--eaduems-footer-brand-title-margin);
+}
+
+.theme-eaduems-footer__brand p {
+    color: var(--eaduems-footer-body);
+    line-height: var(--eaduems-footer-body-line-height);
+    margin: 0;
+    max-width: 30ch;
+}
+
+.theme-eaduems-footer__links h3 {
+    color: var(--eaduems-footer-heading);
+}
+
+.theme-eaduems-footer a {
+    align-items: center;
+    color: var(--eaduems-footer-link);
+    display: inline-flex;
+    gap: 0.55rem;
+    text-decoration: var(--eaduems-footer-link-decoration);
+}
+
+.theme-eaduems-footer__link-icon {
+    font-size: 0.9em;
+    text-align: center;
+    width: 1rem;
+}
+
+.theme-eaduems-footer a:hover,
+.theme-eaduems-footer a:focus {
+    color: var(--eaduems-footer-link-hover);
+    text-decoration: var(--eaduems-footer-link-hover-decoration);
+}
+
+.theme-eaduems-footer a:focus-visible {
+    border-radius: var(--eaduems-footer-link-focus-radius);
+    outline: var(--eaduems-footer-link-focus-outline);
+    outline-offset: var(--eaduems-footer-link-focus-outline-offset);
+}
+
+.theme-eaduems-footer__links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.theme-eaduems-footer__links li + li {
+    margin-top: var(--eaduems-footer-list-gap);
+}
+
+.theme-eaduems-footer__catalog-link {
+    border-top: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+    margin-top: var(--eaduems-space-sm) !important;
+    padding-top: var(--eaduems-space-sm);
+}
+
+.theme-eaduems-footer__catalog-link a {
+    font-weight: var(--eaduems-button-font-weight);
+}
+
+.theme-eaduems-bottomfooter {
+    background: var(--eaduems-bottomfooter-bg);
+    color: var(--eaduems-bottomfooter-text);
+    padding: var(--eaduems-bottomfooter-padding);
+}
+
+.theme-eaduems-bottomfooter__inner {
+    align-items: center;
+    display: flex;
+    gap: var(--eaduems-bottomfooter-inner-gap);
+    justify-content: space-between;
+}
+
+.theme-eaduems-bottomfooter__inner p {
+    line-height: var(--eaduems-bottomfooter-text-line-height);
+    margin: 0;
+}
+
+.theme-eaduems-bottomfooter a {
+    color: var(--eaduems-bottomfooter-link);
+    text-decoration: var(--eaduems-bottomfooter-link-decoration);
+}
+
+.theme-eaduems-bottomfooter a:hover,
+.theme-eaduems-bottomfooter a:focus {
+    color: var(--eaduems-bottomfooter-link-hover);
+    text-decoration: var(--eaduems-bottomfooter-link-hover-decoration);
+}
+
+.theme-eaduems-bottomfooter a:focus-visible {
+    border-radius: var(--eaduems-bottomfooter-link-focus-radius);
+    outline: var(--eaduems-bottomfooter-link-focus-outline);
+    outline-offset: var(--eaduems-bottomfooter-link-focus-outline-offset);
+}
+
+.theme-eaduems-finalcta__panel {
+    align-items: center;
+    background: var(--eaduems-finalcta-panel-bg);
+    border-radius: var(--eaduems-finalcta-panel-radius);
+    color: var(--eaduems-finalcta-panel-text);
+    display: grid;
+    gap: var(--eaduems-finalcta-panel-gap);
+    grid-template-columns: 1.4fr 1fr;
+    padding: var(--eaduems-finalcta-panel-padding);
+}
+
+.theme-eaduems-finalcta__content h2,
+.theme-eaduems-finalcta__content p {
+    color: inherit;
+}
+
+.theme-eaduems-finalcta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--eaduems-finalcta-actions-gap);
+    justify-content: flex-end;
+}
+
+.theme-eaduems-finalcta__actions .theme-eaduems-button--secondary {
+    background: var(--eaduems-finalcta-secondary-bg);
+    border-color: var(--eaduems-finalcta-secondary-border);
+    color: var(--eaduems-finalcta-secondary-text);
+}

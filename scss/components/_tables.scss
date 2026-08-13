@@ -1,0 +1,492 @@
+/* Tables/Lists pilots for Moodle-native surfaces. */
+body#page-filter-manage #region-main {
+    --eaduems-filter-manage-table-bg: transparent;
+    --eaduems-filter-manage-table-text: #163224;
+    --eaduems-filter-manage-table-border: #dee2e6;
+    --eaduems-filter-manage-table-font-size: 16px;
+    --eaduems-filter-manage-table-line-height: 24px;
+    --eaduems-filter-manage-table-header-bg: #ffffff;
+    --eaduems-filter-manage-table-header-text: #000000;
+    --eaduems-filter-manage-table-header-font-weight: 700;
+    --eaduems-filter-manage-table-cell-bg: transparent;
+    --eaduems-filter-manage-table-cell-text: #163224;
+    --eaduems-filter-manage-table-cell-font-weight: 400;
+    --eaduems-filter-manage-table-cell-padding: 12px;
+}
+
+body#page-filter-manage[data-bs-theme="dark"] #region-main {
+    --eaduems-filter-manage-table-border: rgba(22, 50, 36, 0.18);
+    --eaduems-filter-manage-table-header-bg: #f7faf8;
+    --eaduems-filter-manage-table-header-text: #163224;
+}
+
+body#page-filter-manage #region-main .admintable {
+    background-color: var(--eaduems-filter-manage-table-bg);
+    border-color: var(--eaduems-filter-manage-table-border);
+    color: var(--eaduems-filter-manage-table-text);
+    font-size: var(--eaduems-filter-manage-table-font-size);
+    line-height: var(--eaduems-filter-manage-table-line-height);
+}
+
+body#page-filter-manage #region-main .admintable th {
+    background-color: var(--eaduems-filter-manage-table-header-bg);
+    border-color: var(--eaduems-filter-manage-table-border);
+    color: var(--eaduems-filter-manage-table-header-text);
+    font-size: var(--eaduems-filter-manage-table-font-size);
+    font-weight: var(--eaduems-filter-manage-table-header-font-weight);
+    line-height: var(--eaduems-filter-manage-table-line-height);
+    padding: var(--eaduems-filter-manage-table-cell-padding);
+}
+
+body#page-filter-manage #region-main .admintable td {
+    background-color: var(--eaduems-filter-manage-table-cell-bg);
+    border-color: var(--eaduems-filter-manage-table-border);
+    color: var(--eaduems-filter-manage-table-cell-text);
+    font-size: var(--eaduems-filter-manage-table-font-size);
+    font-weight: var(--eaduems-filter-manage-table-cell-font-weight);
+    line-height: var(--eaduems-filter-manage-table-line-height);
+    padding: var(--eaduems-filter-manage-table-cell-padding);
+}
+
+body#page-course-view-participants #region-main nav.initialbargroups {
+    --eaduems-participants-pagination-text: #163224;
+    --eaduems-participants-pagination-font-size: 16px;
+    --eaduems-participants-pagination-line-height: 24px;
+    --eaduems-participants-pagination-list-margin: 0 -1px 16px 0;
+    --eaduems-participants-pagination-list-padding: 0;
+    --eaduems-participants-pagination-link-bg: #ffffff;
+    --eaduems-participants-pagination-link-text: #0f6f3c;
+    --eaduems-participants-pagination-link-border: #dee2e6;
+    --eaduems-participants-pagination-link-radius: 0;
+    --eaduems-participants-pagination-link-font-size: 14px;
+    --eaduems-participants-pagination-link-font-weight: 400;
+    --eaduems-participants-pagination-link-line-height: 21px;
+    --eaduems-participants-pagination-link-padding: 4px 8px;
+    --eaduems-participants-pagination-active-bg: #0f6f3c;
+    --eaduems-participants-pagination-active-text: #ffffff;
+    --eaduems-participants-pagination-active-border: #0f6f3c;
+}
+
+/* MNDC2-03: keep native participant lists on the semantic dark surface. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main {
+    background-color: var(--eaduems-color-surface) !important;
+    color: var(--eaduems-color-text-inverse) !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main .select-menu .dropdown-toggle,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main .initialbar,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.initialbargroups {
+    color: var(--eaduems-color-text-inverse) !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.initialbargroups {
+    --eaduems-participants-pagination-text: var(--eaduems-color-text-inverse);
+    --eaduems-participants-pagination-link-bg: #212529;
+    --eaduems-participants-pagination-link-text: var(--eaduems-color-text-inverse);
+    --eaduems-participants-pagination-link-border: #495057;
+    --eaduems-participants-pagination-active-text: #ffffff;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .select-menu .btn.dropdown-toggle,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .initialbar .initialbarlabel {
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* NIS-02: the participant tertiary selector is rendered on the dark action-bar surface. */
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"] {
+    background-color: var(--eaduems-color-surface) !important;
+    border-color: var(--eaduems-color-border) !important;
+    color: var(--eaduems-color-text-inverse) !important;
+    -webkit-text-fill-color: var(--eaduems-color-text-inverse) !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"]:hover,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"]:focus,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main .tertiary-navigation-selector .select-menu .btn.dropdown-toggle[role="combobox"][aria-expanded="true"] {
+    background-color: var(--eaduems-color-action-primary-hover-bg) !important;
+    border-color: var(--eaduems-color-accent) !important;
+    color: var(--eaduems-color-text-inverse) !important;
+    -webkit-text-fill-color: var(--eaduems-color-text-inverse) !important;
+}
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.initialbargroups .page-link {
+    color: var(--eaduems-color-text-inverse) !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.initialbargroups .page-item.active .page-link {
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants #region-main nav.initialbargroups .pagination.pagination-sm {
+    color: var(--eaduems-participants-pagination-text);
+    font-size: var(--eaduems-participants-pagination-font-size);
+    line-height: var(--eaduems-participants-pagination-line-height);
+    margin: var(--eaduems-participants-pagination-list-margin);
+    padding: var(--eaduems-participants-pagination-list-padding);
+}
+
+body#page-course-view-participants #region-main nav.initialbargroups .pagination.pagination-sm .page-link {
+    background-color: var(--eaduems-participants-pagination-link-bg);
+    border-color: var(--eaduems-participants-pagination-link-border);
+    border-radius: var(--eaduems-participants-pagination-link-radius);
+    color: var(--eaduems-participants-pagination-link-text);
+    font-size: var(--eaduems-participants-pagination-link-font-size);
+    font-weight: var(--eaduems-participants-pagination-link-font-weight);
+    line-height: var(--eaduems-participants-pagination-link-line-height);
+    padding: var(--eaduems-participants-pagination-link-padding);
+}
+
+body#page-course-view-participants #region-main nav.initialbargroups .pagination.pagination-sm .page-item.active .page-link {
+    background-color: var(--eaduems-participants-pagination-active-bg);
+    border-color: var(--eaduems-participants-pagination-active-border);
+    color: var(--eaduems-participants-pagination-active-text);
+}
+
+
+/* MNDC2-05: participant table body must not inherit the low-contrast institutional green. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody tr,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody td {
+    background-color: var(--eaduems-color-surface) !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody td a,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody td .inplaceeditable,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody td .inplaceeditable *:not(.icon) {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Moodle desktop participant styles target descendants directly; keep table copy readable. */
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody td,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody td a,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody td a *,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody td .inplaceeditable,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody td .inplaceeditable * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+/* MNDC2-12: a light participant table header uses dark text, not link-green. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants thead,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants thead th {
+    background-color: #f8f9fa !important;
+    border-color: #dee2e6 !important;
+    color: #212529 !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants thead th a,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants thead th .icon,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants thead th .sorticon {
+    color: #212529 !important;
+    -webkit-text-fill-color: #212529 !important;
+}
+/* MNDC2-07: participant table navigation and batch actions share the native dark contract. */
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody a.aabtn,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main a[data-action="showcount"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* MNDC2-10: participant initials follow the shared light-avatar, dark-copy contract. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody a.aabtn .userinitials,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody a.aabtn .userinitials {
+    background-color: #e9ecef !important;
+    color: #343a40 !important;
+    -webkit-text-fill-color: #343a40 !important;
+}
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody a.aabtn:hover,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #participants tbody a.aabtn:focus-visible,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main a[data-action="showcount"]:hover,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main a[data-action="showcount"]:focus-visible {
+    color: #9eeaf9 !important;
+    -webkit-text-fill-color: #9eeaf9 !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main nav.pagination-centered .page-link {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main nav.pagination-centered .page-link span[aria-hidden="true"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main nav.pagination-centered .page-item.active .page-link,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main nav.pagination-centered .page-link:hover,
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main nav.pagination-centered .page-link:focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants #region-main #formactionid {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #dee2e6 !important;
+    -webkit-text-fill-color: #dee2e6 !important;
+}
+/* The live Moodle toggle marks only body[data-bs-theme], unlike test overrides. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody a.aabtn,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main a[data-action="showcount"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody a.aabtn:hover,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody a.aabtn:focus-visible,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main a[data-action="showcount"]:hover,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main a[data-action="showcount"]:focus-visible {
+    color: #9eeaf9 !important;
+    -webkit-text-fill-color: #9eeaf9 !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link span[aria-hidden="true"] {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-item.active .page-link,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link:hover,
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link:focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* MNDC2-08: disabled batch-action labels stay legible with their disabled select. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main label[for="formactionid"] {
+    color: #dee2e6 !important;
+    -webkit-text-fill-color: #dee2e6 !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] #region-main label[for="formactionid"] + #formactionid:disabled {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #dee2e6 !important;
+    -webkit-text-fill-color: #dee2e6 !important;
+    opacity: 1;
+}
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #formactionid {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #dee2e6 !important;
+    -webkit-text-fill-color: #dee2e6 !important;
+}
+/* MNDC2-09: align participant pagination with the neutral native Gradebook capsule. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main nav.pagination-centered .page-item.active .page-link {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+/* MNDC2-06: Boost drawer toggles are exposed beside authenticated participant pages. */
+body#page-course-view-participants[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"] {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"] .icon {
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"]:hover,
+body#page-course-view-participants[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"]:focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"]:focus-visible {
+    outline: 2px solid #9eeaf9;
+    outline-offset: 2px;
+}
+/* Boost desktop drawer styles require the document theme selector for precedence. */
+html[data-bs-theme="dark"] body#page-course-view-participants button[data-toggler="drawers"][data-action="toggle"],
+html[data-bs-theme="dark"] body#page-course-view-participants button[data-toggler="drawers"][data-action="toggle"] .icon {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html[data-bs-theme="dark"] body#page-course-view-participants button[data-toggler="drawers"][data-action="toggle"] .icon {
+    background-color: transparent !important;
+}
+body#page-course-view-participants[data-bs-theme="dark"] .drawertoggle:not(.hidden) {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] .drawertoggle:not(.hidden):hover,
+body#page-course-view-participants[data-bs-theme="dark"] .drawertoggle:not(.hidden):focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+}
+/* GTL-01: keep gradebook columns scrollable without reserving a vertical scrollbar. */
+body#page-grade-report-grader-index #region-main .gradeparent {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* NTG-02: contain the dense role-capability table inside its native box. */
+body#page-admin-roles-permissions #region-main .capbox {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* NTG-03: contain the participant action bar on narrow viewports. */
+/* ABL-01: action-bar content wraps naturally; mixed axis overflow creates a vertical scrollbar. */
+body#page-course-view-participants #region-main #action_bar {
+    height: auto;
+    max-height: none;
+    max-width: 100%;
+    overflow: visible;
+}
+body#page-course-view-participants #page-wrapper {
+    overflow-x: clip;
+}
+
+/* MNDC2-04: semantic dark surface for the native Gradebook report. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main {
+    background-color: var(--eaduems-color-surface) !important;
+    color: #ffffff !important;
+}
+
+/* GTL-01: the dark surface rule is more specific, so retain the no-vertical-scroll contract. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent {
+    overflow-y: hidden !important;
+}
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent table,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent th,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent td {
+    background-color: var(--eaduems-color-surface) !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent thead th,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .tableheader {
+    background-color: #212529 !important;
+}
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent a:not(.btn),
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .gradeitemheader,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .userrow,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .itemname,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .fullname,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .gradevalue {
+    color: #ffffff !important;
+}
+/* MNDC2-04 interaction states: do not restore low-contrast native link colors. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent a:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent a:focus,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent a:focus-visible,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .dropdown-toggle:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent .dropdown-toggle:focus,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle:focus {
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}
+/* GTL-02: native Gradebook pagination must not retain Bootstrap light surfaces in dark mode. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-link {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-item.active .page-link,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-link:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-link:focus,
+/* Native pagination can color the inner spans independently on desktop. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link span[aria-hidden="true"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-link:focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Native pagination can color the inner spans independently on desktop. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main nav.pagination-centered .page-link span[aria-hidden="true"] {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .pagination-centered .page-link:focus-visible {
+    outline: 2px solid #9eeaf9;
+    outline-offset: 2px;
+}
+/* MNDC2-11: Gradebook reuses the native drawer capsule from participant pages. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"],
+body#page-grade-report-grader-index[data-bs-theme="dark"] .drawertoggle:not(.hidden) {
+    background-color: #212529 !important;
+    border-color: #495057 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body#page-grade-report-grader-index[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"] .icon,
+body#page-grade-report-grader-index[data-bs-theme="dark"] .drawertoggle:not(.hidden) .icon {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+body#page-grade-report-grader-index[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"]:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] button[data-toggler="drawers"][data-action="toggle"]:focus-visible,
+body#page-grade-report-grader-index[data-bs-theme="dark"] .drawertoggle:not(.hidden):hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] .drawertoggle:not(.hidden):focus-visible {
+    background-color: #0f6f3c !important;
+    border-color: #0f6f3c !important;
+    color: #ffffff !important;
+}
+
+/* Keep the H5P semantic blue; convert monochrome native activity icons for dark surfaces. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent img.itemicon {
+    filter: brightness(0) invert(1);
+}
+
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent img.itemicon[src*="/h5pactivity/"] {
+    filter: none;
+}
+/* ANST-01: dark table links keep a cyan keyboard-focus ring instead of the light-surface link focus. */
+body#page-course-view-participants[data-bs-theme="dark"] #region-main #participants tbody a.aabtn:focus-visible,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .gradeparent a:not(.btn):focus-visible {
+    background-color: rgba(158, 234, 249, 0.16) !important;
+    outline: 2px solid #9eeaf9 !important;
+    outline-offset: 2px;
+}
+/* Grade report switcher lives outside .gradeparent. */
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-switcher .dropdown-toggle,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-switcher .dropdown-toggle:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-switcher .dropdown-toggle:focus,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-switcher .dropdown-toggle[aria-expanded="true"],
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle:hover,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle:focus,
+body#page-grade-report-grader-index[data-bs-theme="dark"] #region-main .grade-report-navigation .dropdown-toggle[aria-expanded="true"] {
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}

@@ -1,0 +1,24 @@
+﻿<section class="theme-eaduems-section theme-eaduems-onboarding" id="como-funciona">
+    <div class="container-xl">
+        {{> theme_eaduems/components/section_header }}
+        <div class="theme-eaduems-card-surface">
+            <div class="theme-eaduems-card-rows theme-eaduems-card-rows--onboarding">
+                {{#rows}}
+                <div class="theme-eaduems-card-row theme-eaduems-card-row--onboarding">
+                    {{#items}}
+                    <article class="theme-eaduems-card theme-eaduems-card--step">
+                        <div class="theme-eaduems-card__media theme-eaduems-card__media--step">
+                            <span>{{title}}</span>
+                        </div>
+                        <div class="theme-eaduems-card__content theme-eaduems-card__content--centered">
+                            <h3>{{title}}</h3>
+                            <p>{{description}}</p>
+                        </div>
+                    </article>
+                    {{/items}}
+                </div>
+                {{/rows}}
+            </div>
+        </div>
+    </div>
+</section>

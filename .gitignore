@@ -1,0 +1,20 @@
+﻿# Local/runtime artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Local editor files
+.vscode/
+.idea/
+
+# Generated or heavy documentation evidence
+/docs/assets/*.png
+/docs/visual_checks/
+/docs/arquivo/
+
+# Moodle/local runtime caches, if created inside the theme by mistake
+.cache/
+temp/
+tmp/

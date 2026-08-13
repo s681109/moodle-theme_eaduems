@@ -1,0 +1,32 @@
+<section class="theme-eaduems-footer">
+    <div class="container-xl theme-eaduems-footer__inner">
+        <div class="theme-eaduems-footer__brand">
+            {{#site_logo_url}}
+            <img class="theme-eaduems-footer__logo" src="{{site_logo_url}}" alt="{{headline}}">
+            {{/site_logo_url}}
+            <div>
+                <h2>{{headline}}</h2>
+                <p>{{body}}</p>
+            </div>
+        </div>
+        <div class="theme-eaduems-footer__links">
+            <h3>{{links_heading}}</h3>
+            <ul>
+                {{#links}}
+                <li><a href="{{url}}"{{#newtab}} target="_blank" rel="noopener"{{/newtab}}><span class="theme-eaduems-footer__link-icon fa {{icon}}" aria-hidden="true"></span><span>{{label}}</span></a></li>
+                {{/links}}
+            </ul>
+        </div>
+        <div class="theme-eaduems-footer__links">
+            <h3>{{categories_heading}}</h3>
+            <ul>
+                {{#categories}}
+                <li><a href="{{url}}" target="_blank" rel="noopener"><span class="theme-eaduems-footer__link-icon fa {{icon}}" aria-hidden="true"></span><span>{{label}}</span></a></li>
+                {{/categories}}
+                {{#catalog_link}}
+                <li class="theme-eaduems-footer__catalog-link"><a href="{{url}}" target="_blank" rel="noopener"><span class="theme-eaduems-footer__link-icon fa {{icon}}" aria-hidden="true"></span><span>{{label}}</span></a></li>
+                {{/catalog_link}}
+            </ul>
+        </div>
+    </div>
+</section>

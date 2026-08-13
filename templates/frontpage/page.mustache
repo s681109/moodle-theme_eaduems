@@ -1,0 +1,97 @@
+﻿{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper" class="theme-eaduems-shell">
+    {{{ output.standard_top_of_body_html }}}
+
+    {{#hasblocks}}
+        {{< theme_boost/drawer }}
+            {{$id}}theme_eaduems-frontpage-blocks{{/id}}
+            {{$drawerclasses}}drawer drawer-right{{#blockdraweropen}} show{{/blockdraweropen}}{{/drawerclasses}}
+            {{$drawercontent}}
+                <div class="d-print-none">
+                    {{{ addblockbutton }}}
+                    {{{ sidepreblocks }}}
+                </div>
+            {{/drawercontent}}
+            {{$drawerpreferencename}}drawer-open-block{{/drawerpreferencename}}
+            {{$drawerstate}}show-drawer-right{{/drawerstate}}
+            {{$tooltipplacement}}left{{/tooltipplacement}}
+            {{$drawercloseonresize}}1{{/drawercloseonresize}}
+            {{$closebuttontext}}{{#str}}closeblockdrawer, core{{/str}}{{/closebuttontext}}
+        {{/ theme_boost/drawer}}
+    {{/hasblocks}}
+
+    <div id="page" data-region="mainpage" class="drawers {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}}">
+    <div class="theme-eaduems-frontpage">
+        {{#hasblocks}}
+        <div class="drawer-toggles d-flex">
+            <div class="drawer-toggler drawer-right-toggle ms-auto d-print-none">
+                <button
+                    class="btn icon-no-margin"
+                    data-toggler="drawers"
+                    data-action="toggle"
+                    data-target="theme_eaduems-frontpage-blocks"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="{{#str}}opendrawerblocks, core{{/str}}"
+                >
+                    <span class="visually-hidden">{{#str}}opendrawerblocks, core{{/str}}</span>
+                    <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
+                    <span class="dir-ltr-hide">{{#pix}}t/blocks_drawer_rtl, core{{/pix}}</span>
+                </button>
+            </div>
+        </div>
+        {{/hasblocks}}
+        {{#siteheader}}
+        {{> theme_eaduems/navigation/site_header }}
+        {{/siteheader}}
+        {{#hero}}
+        {{> theme_eaduems/frontpage/hero }}
+        {{/hero}}
+        {{#carousel}}
+        {{> theme_eaduems/frontpage/carousel }}
+        {{/carousel}}
+        {{#featuredpaths}}
+        {{> theme_eaduems/frontpage/featured_paths }}
+        {{/featuredpaths}}
+        {{#onboarding}}
+        {{> theme_eaduems/frontpage/onboarding }}
+        {{/onboarding}}
+        {{#newsfeed}}
+        {{> theme_eaduems/frontpage/news_feed }}
+        {{/newsfeed}}
+        {{#finalcta}}
+        {{> theme_eaduems/frontpage/final_cta }}
+        {{/finalcta}}
+
+        {{#hasmaincontent}}
+        <section class="theme-eaduems-section theme-eaduems-maincontent">
+            <div class="container-xl">
+                {{{ maincontent }}}
+            </div>
+        </section>
+        {{/hasmaincontent}}
+
+        {{#institutionalfooter}}
+        {{> theme_eaduems/footer/institutional_footer }}
+        {{/institutionalfooter}}
+        {{#bottomfooter}}
+        {{> theme_eaduems/footer/bottom_footer }}
+        {{/bottomfooter}}
+    </div>
+    </div>
+</div>
+
+{{{ output.standard_after_main_region_html }}}
+{{{ output.standard_end_of_body_html }}}
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_eaduems/frontpage');
+require(['theme_boost/loader', 'theme_boost/drawers'], function() {
+    M.util.js_complete('theme_eaduems/frontpage');
+});
+{{/js}}

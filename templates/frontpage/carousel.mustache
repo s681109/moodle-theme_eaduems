@@ -1,0 +1,153 @@
+<section class="theme-eaduems-section theme-eaduems-carousel">
+    <div class="container-xl">
+        <div id="theme-eaduems-carousel"
+             class="theme-eaduems-carousel__frame"
+             data-carousel-autoplay="{{#autoplay}}true{{/autoplay}}{{^autoplay}}false{{/autoplay}}"
+             data-carousel-interval="5000">
+            <div class="carousel-inner theme-eaduems-carousel__viewport">
+                {{#slides}}
+                <div class="carousel-item theme-eaduems-carousel__slide{{#isactive}} active is-active{{/isactive}}" aria-hidden="{{#isactive}}false{{/isactive}}{{^isactive}}true{{/isactive}}"{{^isactive}} hidden{{/isactive}}>
+                    <div class="theme-eaduems-carousel__item">
+                        <img class="theme-eaduems-carousel__image" src="{{image_url}}" alt="{{title}}">
+                        <div class="theme-eaduems-carousel__overlay">
+                            <div class="theme-eaduems-carousel__panel">
+                                {{#title}}<h2>{{title}}</h2>{{/title}}
+                                {{#caption}}<p>{{caption}}</p>{{/caption}}
+                                {{#url}}<a class="theme-eaduems-button theme-eaduems-button--primary theme-eaduems-carousel__cta" href="{{url}}">{{#str}}carouselcta, theme_eaduems{{/str}}</a>{{/url}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/slides}}
+            </div>
+            {{#hasmultiple}}
+            <button class="carousel-control-prev theme-eaduems-carousel__arrow theme-eaduems-carousel__arrow--prev" type="button" aria-label="Slide anterior">
+                <span class="theme-eaduems-carousel__arrow-icon" aria-hidden="true">&#8249;</span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next theme-eaduems-carousel__arrow theme-eaduems-carousel__arrow--next" type="button" aria-label="Próximo slide">
+                <span class="theme-eaduems-carousel__arrow-icon" aria-hidden="true">&#8250;</span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            {{/hasmultiple}}
+        </div>
+    </div>
+</section>
+
+{{#js}}
+require([], function() {
+    document.querySelectorAll('#theme-eaduems-carousel').forEach(function(carousel) {
+        if (carousel.dataset.carouselReady === 'true') {
+            return;
+        }
+
+        var slides = Array.prototype.slice.call(carousel.querySelectorAll('.theme-eaduems-carousel__slide'));
+        var prev = carousel.querySelector('.carousel-control-prev');
+        var next = carousel.querySelector('.carousel-control-next');
+        var autoplay = carousel.dataset.carouselAutoplay === 'true';
+        var interval = parseInt(carousel.dataset.carouselInterval, 10) || 5000;
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var current = Math.max(0, slides.findIndex(function(slide) {
+            return slide.classList.contains('is-active');
+        }));
+        var timer = null;
+        var lock = false;
+
+        if (slides.length < 2) {
+            carousel.dataset.carouselReady = 'true';
+            return;
+        }
+
+        var applyState = function(index) {
+            current = (index + slides.length) % slides.length;
+            slides.forEach(function(slide, slideIndex) {
+                var active = slideIndex === current;
+                slide.classList.toggle('active', active);
+                slide.classList.toggle('is-active', active);
+                slide.classList.remove('is-leaving');
+                slide.hidden = !active;
+                slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+            });
+        };
+
+        var goToSlide = function(index) {
+            if (lock) {
+                return;
+            }
+
+            var nextIndex = (index + slides.length) % slides.length;
+            if (nextIndex === current) {
+                return;
+            }
+
+            lock = true;
+            var currentSlide = slides[current];
+            var nextSlide = slides[nextIndex];
+
+            currentSlide.classList.add('active');
+            currentSlide.classList.add('is-leaving');
+            currentSlide.classList.remove('is-active');
+            currentSlide.hidden = false;
+            currentSlide.setAttribute('aria-hidden', 'true');
+
+            nextSlide.hidden = false;
+            nextSlide.setAttribute('aria-hidden', 'false');
+            nextSlide.classList.add('active');
+
+            window.requestAnimationFrame(function() {
+                nextSlide.classList.add('is-active');
+            });
+
+            window.setTimeout(function() {
+                currentSlide.classList.remove('active');
+                currentSlide.classList.remove('is-leaving');
+                currentSlide.hidden = true;
+                current = nextIndex;
+                lock = false;
+            }, 650);
+        };
+
+        var stopAutoplay = function() {
+            if (timer) {
+                window.clearInterval(timer);
+                timer = null;
+            }
+        };
+
+        var startAutoplay = function() {
+            if (!autoplay || reducedMotion) {
+                return;
+            }
+            stopAutoplay();
+            timer = window.setInterval(function() {
+                goToSlide(current + 1);
+            }, interval);
+        };
+
+        if (prev) {
+            prev.addEventListener('click', function() {
+                goToSlide(current - 1);
+                startAutoplay();
+            });
+        }
+
+        if (next) {
+            next.addEventListener('click', function() {
+                goToSlide(current + 1);
+                startAutoplay();
+            });
+        }
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('focusin', stopAutoplay);
+        carousel.addEventListener('focusout', startAutoplay);
+
+        applyState(current);
+        startAutoplay();
+        carousel.dataset.carouselReady = 'true';
+    });
+});
+{{/js}}
+
+

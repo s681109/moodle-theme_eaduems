@@ -1,0 +1,15 @@
+<article class="theme-eaduems-card theme-eaduems-card--news">
+    <div class="theme-eaduems-card__media theme-eaduems-card__media--news{{#hasimage}} theme-eaduems-card__media--news-image{{/hasimage}}">
+        {{#hasimage}}<img src="{{imageurl}}" alt="{{title}}" loading="lazy">{{/hasimage}}
+    </div>
+    <div class="theme-eaduems-card__content theme-eaduems-card__content--news">
+        <h3>{{title}}</h3>
+        <p class="theme-eaduems-card__meta theme-eaduems-card__meta--news">
+            <span class="theme-eaduems-card__meta-icon" aria-hidden="true">&#9432;</span>
+            <span>{{meta}}</span>
+        </p>
+        <div class="theme-eaduems-card__divider" aria-hidden="true"></div>
+        <p class="theme-eaduems-card__summary">{{excerpt}}</p>
+        <a class="theme-eaduems-card__cta" href="{{url}}">{{#linklabel}}{{linklabel}}{{/linklabel}}{{^linklabel}}Mais...{{/linklabel}}</a>
+    </div>
+</article>

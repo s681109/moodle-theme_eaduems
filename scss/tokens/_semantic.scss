@@ -1,0 +1,44 @@
+body {
+    background: var(--eaduems-bg);
+    color: var(--eaduems-text);
+}
+
+a {
+    color: var(--eaduems-brand);
+}
+
+body[data-bs-theme="dark"] #page-header,
+body[data-bs-theme="dark"] #page-header h1,
+body[data-bs-theme="dark"] #page-header h2,
+body[data-bs-theme="dark"] .page-header-headings,
+body[data-bs-theme="dark"] .page-header-headings h1,
+body[data-bs-theme="dark"] .page-header-headings h2,
+body[data-bs-theme="dark"] .secondary-navigation,
+body[data-bs-theme="dark"] .secondary-navigation .nav-link,
+body[data-bs-theme="dark"] .activity-header,
+body[data-bs-theme="dark"] .activity-header h1,
+body[data-bs-theme="dark"] .activity-header h2,
+body[data-bs-theme="dark"] .course-content,
+body[data-bs-theme="dark"] .course-content h1,
+body[data-bs-theme="dark"] .course-content h2,
+body[data-bs-theme="dark"] .course-content h3,
+body[data-bs-theme="dark"] .activity-information,
+body[data-bs-theme="dark"] .submissionstatustable,
+body[data-bs-theme="dark"] .submissionstatustable th,
+body[data-bs-theme="dark"] .submissionstatustable td,
+body[data-bs-theme="dark"] .generaltable,
+body[data-bs-theme="dark"] .generaltable th,
+body[data-bs-theme="dark"] .generaltable td,
+body[data-bs-theme="dark"] #adminsettings,
+body[data-bs-theme="dark"] #adminsettings h1,
+body[data-bs-theme="dark"] #adminsettings h2,
+body[data-bs-theme="dark"] #adminsettings h3 {
+    color: var(--eaduems-color-on-light-surface);
+}
+
+body[data-bs-theme="dark"] #page-header .text-muted,
+body[data-bs-theme="dark"] .activity-header .text-muted,
+body[data-bs-theme="dark"] .course-content .text-muted,
+body[data-bs-theme="dark"] #adminsettings .text-muted {
+    color: var(--eaduems-color-muted-on-light-surface) !important;
+}

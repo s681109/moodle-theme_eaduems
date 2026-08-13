@@ -1,0 +1,126 @@
+/* Forms/Inputs pilots for Moodle-native surfaces. */
+body#page-admin-search form.mform.simplesearchform {
+    --eaduems-admin-search-control-bg: #ffffff;
+    --eaduems-admin-search-control-text: #212529;
+    --eaduems-admin-search-control-border: #dee2e6;
+    --eaduems-admin-search-control-font-size: 16px;
+    --eaduems-admin-search-control-font-weight: 400;
+    --eaduems-admin-search-control-line-height: 24px;
+    --eaduems-admin-search-control-padding-y: 6px;
+    --eaduems-admin-search-control-padding-x: 12px;
+    --eaduems-admin-search-input-radius: 12px 0 0 12px;
+    --eaduems-admin-search-button-bg: #0f6f3c;
+    --eaduems-admin-search-button-text: #ffffff;
+    --eaduems-admin-search-button-border: #0f6f3c;
+    --eaduems-admin-search-button-radius: 0 12px 12px 0;
+    --eaduems-admin-search-button-padding-y: 6px;
+    --eaduems-admin-search-button-padding-x: 8px;
+}
+
+body#page-admin-search[data-bs-theme="dark"] form.mform.simplesearchform {
+    --eaduems-admin-search-control-bg: #212529;
+    --eaduems-admin-search-control-text: #dee2e6;
+    --eaduems-admin-search-control-border: #495057;
+}
+
+body#page-admin-search form.mform.simplesearchform input[type="text"],
+body#page-admin-search form.mform.simplesearchform input[type="search"],
+body#page-admin-search form.mform.simplesearchform .form-control {
+    background-color: var(--eaduems-admin-search-control-bg);
+    border-color: var(--eaduems-admin-search-control-border);
+    border-radius: var(--eaduems-admin-search-input-radius);
+    color: var(--eaduems-admin-search-control-text);
+    font-size: var(--eaduems-admin-search-control-font-size);
+    font-weight: var(--eaduems-admin-search-control-font-weight);
+    line-height: var(--eaduems-admin-search-control-line-height);
+    padding: var(--eaduems-admin-search-control-padding-y) var(--eaduems-admin-search-control-padding-x);
+}
+
+body#page-admin-search form.mform.simplesearchform button[type="submit"],
+body#page-admin-search form.mform.simplesearchform input[type="submit"],
+body#page-admin-search form.mform.simplesearchform .btn[type="submit"] {
+    background-color: var(--eaduems-admin-search-button-bg);
+    border-color: var(--eaduems-admin-search-button-border);
+    border-radius: var(--eaduems-admin-search-button-radius);
+    color: var(--eaduems-admin-search-button-text);
+    font-size: var(--eaduems-admin-search-control-font-size);
+    font-weight: var(--eaduems-admin-search-control-font-weight);
+    line-height: var(--eaduems-admin-search-control-line-height);
+    padding: var(--eaduems-admin-search-button-padding-y) var(--eaduems-admin-search-button-padding-x);
+}
+
+body#page-course-view-participants .filter-group {
+    --eaduems-participants-filter-select-bg: #ffffff;
+    --eaduems-participants-filter-select-text: #212529;
+    --eaduems-participants-filter-select-border: #dee2e6;
+    --eaduems-participants-filter-select-radius: 12px;
+    --eaduems-participants-filter-select-font-size: 16px;
+    --eaduems-participants-filter-select-font-weight: 400;
+    --eaduems-participants-filter-select-line-height: 24px;
+    --eaduems-participants-filter-select-padding: 6px 36px 6px 12px;
+}
+
+body#page-course-view-participants[data-bs-theme="dark"] .filter-group {
+    --eaduems-participants-filter-select-bg: #212529;
+    --eaduems-participants-filter-select-text: #dee2e6;
+    --eaduems-participants-filter-select-border: #495057;
+}
+
+body#page-course-view-participants .filter-group .form-select {
+    background-color: var(--eaduems-participants-filter-select-bg);
+    border-color: var(--eaduems-participants-filter-select-border);
+    border-radius: var(--eaduems-participants-filter-select-radius);
+    color: var(--eaduems-participants-filter-select-text);
+    font-size: var(--eaduems-participants-filter-select-font-size);
+    font-weight: var(--eaduems-participants-filter-select-font-weight);
+    line-height: var(--eaduems-participants-filter-select-line-height);
+    padding: var(--eaduems-participants-filter-select-padding);
+}
+
+body#page-filter-manage #region-main {
+    --eaduems-filter-manage-select-bg: #ffffff;
+    --eaduems-filter-manage-select-text: #212529;
+    --eaduems-filter-manage-select-border: #dee2e6;
+    --eaduems-filter-manage-select-radius: 12px;
+    --eaduems-filter-manage-select-font-size: 16px;
+    --eaduems-filter-manage-select-font-weight: 400;
+    --eaduems-filter-manage-select-line-height: 24px;
+    --eaduems-filter-manage-select-padding: 6px 36px 6px 12px;
+    --eaduems-filter-manage-button-bg: #0f6f3c;
+    --eaduems-filter-manage-button-text: #ffffff;
+    --eaduems-filter-manage-button-border: #0f6f3c;
+    --eaduems-filter-manage-button-radius: 12px;
+    --eaduems-filter-manage-button-font-size: 16px;
+    --eaduems-filter-manage-button-font-weight: 400;
+    --eaduems-filter-manage-button-line-height: 24px;
+    --eaduems-filter-manage-button-padding: 6px 12px;
+}
+
+body#page-filter-manage[data-bs-theme="dark"] #region-main {
+    --eaduems-filter-manage-select-bg: #212529;
+    --eaduems-filter-manage-select-text: #dee2e6;
+    --eaduems-filter-manage-select-border: #495057;
+}
+
+body#page-filter-manage #region-main .admintable select.form-select {
+    background-color: var(--eaduems-filter-manage-select-bg);
+    border-color: var(--eaduems-filter-manage-select-border);
+    border-radius: var(--eaduems-filter-manage-select-radius);
+    color: var(--eaduems-filter-manage-select-text);
+    font-size: var(--eaduems-filter-manage-select-font-size);
+    font-weight: var(--eaduems-filter-manage-select-font-weight);
+    line-height: var(--eaduems-filter-manage-select-line-height);
+    padding: var(--eaduems-filter-manage-select-padding);
+}
+
+body#page-filter-manage #region-main input[type="submit"].btn-primary[name="savechanges"] {
+    background-color: var(--eaduems-filter-manage-button-bg);
+    border-color: var(--eaduems-filter-manage-button-border);
+    border-radius: var(--eaduems-filter-manage-button-radius);
+    color: var(--eaduems-filter-manage-button-text);
+    font-size: var(--eaduems-filter-manage-button-font-size);
+    font-weight: var(--eaduems-filter-manage-button-font-weight);
+    line-height: var(--eaduems-filter-manage-button-line-height);
+    padding: var(--eaduems-filter-manage-button-padding);
+}
+

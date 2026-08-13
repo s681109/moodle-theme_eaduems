@@ -1,0 +1,184 @@
+.theme-eaduems-carousel {
+    background: var(--eaduems-carousel-bg);
+    padding-top: 1.5rem;
+}
+
+.theme-eaduems-carousel .container-xl {
+    max-width: 1480px;
+}
+
+.theme-eaduems-carousel__frame {
+    border-radius: var(--eaduems-carousel-frame-radius);
+    box-shadow: var(--eaduems-carousel-frame-shadow);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.theme-eaduems-carousel__viewport {
+    min-height: 0;
+    position: relative;
+}
+
+.theme-eaduems-carousel__slide {
+    display: block;
+    float: none;
+    inset: 0;
+    margin-right: 0;
+    opacity: 0;
+    position: absolute;
+    transform: none;
+    transition: opacity .6s ease;
+    visibility: hidden;
+}
+
+.theme-eaduems-carousel__slide.active,
+.theme-eaduems-carousel__slide.is-active,
+.theme-eaduems-carousel__slide.is-leaving {
+    display: block;
+    visibility: visible;
+}
+
+.theme-eaduems-carousel__slide.is-active {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.theme-eaduems-carousel__slide.is-leaving {
+    opacity: 0;
+    z-index: 1;
+}
+
+.theme-eaduems-carousel__item {
+    aspect-ratio: 74 / 27;
+    min-height: 0;
+    position: relative;
+}
+
+.theme-eaduems-carousel__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    transform-origin: center center;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .theme-eaduems-carousel__slide.is-active .theme-eaduems-carousel__image {
+        animation: theme-eaduems-carousel-zoom 8s linear both;
+    }
+}
+
+.theme-eaduems-carousel__overlay {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: flex-end;
+    padding: var(--eaduems-carousel-overlay-padding);
+    position: absolute;
+}
+
+.theme-eaduems-carousel__panel {
+    backdrop-filter: blur(4px);
+    background: var(--eaduems-carousel-panel-bg);
+    box-shadow: var(--eaduems-carousel-panel-shadow);
+    border: 1px solid var(--eaduems-carousel-panel-border);
+    border-radius: var(--eaduems-carousel-panel-radius);
+    color: var(--eaduems-carousel-panel-text);
+    max-width: min(34rem, 36%);
+    min-height: 18rem;
+    padding: var(--eaduems-carousel-panel-padding);
+    width: 100%;
+}
+
+.theme-eaduems-carousel__panel h2 {
+    color: var(--eaduems-carousel-panel-text);
+    font-size: var(--eaduems-carousel-title-size);
+    margin-bottom: 0.75rem;
+}
+
+.theme-eaduems-carousel__panel p {
+    color: var(--eaduems-carousel-panel-muted);
+    margin-bottom: 1.25rem;
+    max-width: 28rem;
+}
+
+.theme-eaduems-carousel__cta {
+    display: inline-flex;
+    margin: var(--eaduems-carousel-cta-margin);
+}
+
+.theme-eaduems-carousel__arrow {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--eaduems-carousel-arrow-text);
+    display: inline-flex;
+    height: auto;
+    justify-content: center;
+    opacity: 1;
+    padding: 0;
+    position: absolute;
+    text-shadow: var(--eaduems-carousel-arrow-shadow);
+    transition: color 160ms ease, opacity 160ms ease;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    z-index: 5;
+}
+
+.theme-eaduems-carousel__arrow--prev {
+    left: var(--eaduems-carousel-arrow-offset);
+}
+
+.theme-eaduems-carousel__arrow--next {
+    right: var(--eaduems-carousel-arrow-offset);
+}
+
+.theme-eaduems-carousel__arrow:hover,
+.theme-eaduems-carousel__arrow:focus {
+    background: transparent;
+    color: var(--eaduems-carousel-arrow-text);
+}
+
+.theme-eaduems-carousel__arrow-icon {
+    font-size: 5.5rem;
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+@keyframes theme-eaduems-carousel-zoom {
+    from { transform: scale(1.02); }
+    to { transform: scale(1.08); }
+}
+
+@media (max-width: 991.98px) {
+    .theme-eaduems-carousel__item {
+        aspect-ratio: 16 / 10;
+    }
+
+    .theme-eaduems-carousel__overlay {
+        justify-content: stretch;
+        padding: var(--eaduems-carousel-overlay-padding-mobile);
+    }
+
+    .theme-eaduems-carousel__panel {
+        max-width: none;
+        min-height: auto;
+        padding: var(--eaduems-carousel-panel-padding-mobile);
+    }
+
+    .theme-eaduems-carousel__arrow-icon {
+        font-size: 5.5rem;
+    }
+
+    .theme-eaduems-carousel__arrow--prev {
+        left: var(--eaduems-carousel-arrow-offset-mobile);
+    }
+
+    .theme-eaduems-carousel__arrow--next {
+        right: var(--eaduems-carousel-arrow-offset-mobile);
+    }
+}

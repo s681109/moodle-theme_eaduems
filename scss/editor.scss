@@ -1,0 +1,12 @@
+@import "tokens/light";
+@import "tokens/dark";
+@import "tokens/semantic";
+
+:root,
+[data-bs-theme="light"] {
+    color-scheme: light;
+}
+
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+}

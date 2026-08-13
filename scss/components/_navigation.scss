@@ -1,0 +1,128 @@
+body#page-course-view-topics .secondary-navigation .nav-tabs .nav-link,
+body#page-mod-assign-view .secondary-navigation .nav-tabs .nav-link {
+    background-color: var(--eaduems-course-tabs-bg);
+    border-color: var(--eaduems-course-tabs-border) var(--eaduems-course-tabs-border) var(--eaduems-course-tabs-transparent-border);
+    color: var(--eaduems-course-tabs-link);
+    font-size: var(--eaduems-course-tabs-font-size);
+    font-weight: var(--eaduems-course-tabs-font-weight);
+    line-height: var(--eaduems-course-tabs-line-height);
+    margin: var(--eaduems-course-tabs-margin);
+    padding: var(--eaduems-course-tabs-padding);
+}
+
+body#page-course-view-topics .secondary-navigation .nav-tabs .nav-link.active,
+body#page-course-view-topics .secondary-navigation .nav-tabs .nav-link.active_tree_node,
+body#page-mod-assign-view .secondary-navigation .nav-tabs .nav-link.active,
+body#page-mod-assign-view .secondary-navigation .nav-tabs .nav-link.active_tree_node {
+    background-color: var(--eaduems-course-tabs-active-bg);
+    border-color: var(--eaduems-course-tabs-transparent-border) var(--eaduems-course-tabs-transparent-border) var(--eaduems-course-tabs-active-border);
+    color: var(--eaduems-course-tabs-active-link);
+}
+body#page-course-view-topics .secondary-navigation .dropdown-menu,
+body#page-mod-assign-view .secondary-navigation .dropdown-menu {
+    background-color: var(--eaduems-course-tabs-dropdown-bg);
+    border-color: var(--eaduems-course-tabs-dropdown-border);
+    border-radius: var(--eaduems-course-tabs-dropdown-radius);
+    box-shadow: var(--eaduems-course-tabs-dropdown-shadow);
+    color: var(--eaduems-course-tabs-dropdown-text);
+    font-size: var(--eaduems-course-tabs-dropdown-item-font-size);
+    font-weight: var(--eaduems-course-tabs-dropdown-item-font-weight);
+    line-height: var(--eaduems-course-tabs-dropdown-item-line-height);
+    margin: var(--eaduems-course-tabs-dropdown-margin);
+    padding: var(--eaduems-course-tabs-dropdown-padding);
+}
+
+body#page-course-view-topics .secondary-navigation .dropdown-menu .dropdown-item,
+body#page-mod-assign-view .secondary-navigation .dropdown-menu .dropdown-item {
+    background-color: var(--eaduems-course-tabs-dropdown-item-bg);
+    border-radius: var(--eaduems-course-tabs-dropdown-item-radius);
+    color: var(--eaduems-course-tabs-dropdown-item-text);
+    font-size: var(--eaduems-course-tabs-dropdown-item-font-size);
+    font-weight: var(--eaduems-course-tabs-dropdown-item-font-weight);
+    line-height: var(--eaduems-course-tabs-dropdown-item-line-height);
+    margin: var(--eaduems-course-tabs-dropdown-item-margin);
+    padding: var(--eaduems-course-tabs-dropdown-item-padding);
+}
+
+/* NAV2-01: preserve the existing native secondary-navigation values through shared aliases. */
+body#page-course-view-participants .secondary-navigation .nav-link,
+body#page-admin-plugins .secondary-navigation .nav-link,
+body#page-question-banks .secondary-navigation .nav-link {
+    color: var(--eaduems-native-secondary-nav-link);
+}
+
+body#page-course-view-participants .secondary-navigation .nav-link.active,
+body#page-course-view-participants .secondary-navigation .nav-link.active_tree_node,
+body#page-admin-plugins .secondary-navigation .nav-link.active,
+body#page-admin-plugins .secondary-navigation .nav-link.active_tree_node,
+body#page-question-banks .secondary-navigation .nav-link.active,
+body#page-question-banks .secondary-navigation .nav-link.active_tree_node {
+    border-color: var(--eaduems-native-secondary-nav-transparent-border) var(--eaduems-native-secondary-nav-transparent-border) var(--eaduems-native-secondary-nav-active-border);
+    color: var(--eaduems-native-secondary-nav-active-link);
+}
+
+/* BCR-01: the shared Moodle page-navbar breadcrumb consumes global aliases. */
+#page-navbar .breadcrumb {
+    background-color: var(--eaduems-global-breadcrumb-bg);
+    color: var(--eaduems-global-breadcrumb-text);
+    font-size: var(--eaduems-global-breadcrumb-font-size);
+    font-weight: var(--eaduems-global-breadcrumb-font-weight);
+}
+
+#page-navbar .breadcrumb .breadcrumb-item {
+    color: var(--eaduems-global-breadcrumb-text);
+}
+
+#page-navbar .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--eaduems-global-breadcrumb-separator);
+}
+
+#page-navbar .breadcrumb a {
+    color: var(--eaduems-global-breadcrumb-link);
+}
+
+/* BCR-02: shared interactive states keep breadcrumb links perceptible on native surfaces. */
+#page-navbar .breadcrumb a:hover {
+    color: var(--eaduems-global-breadcrumb-link-hover) !important;
+    text-decoration: underline;
+}
+
+#page-navbar .breadcrumb a:focus-visible {
+    background-color: var(--eaduems-global-breadcrumb-focus-bg);
+    color: var(--eaduems-global-breadcrumb-link-hover);
+    outline: 2px solid var(--eaduems-global-breadcrumb-focus-outline);
+    outline-offset: 2px;
+    text-decoration: underline;
+}
+
+body#page-mod-assign-view .breadcrumb {
+    background-color: var(--eaduems-module-breadcrumb-bg);
+    border-color: var(--eaduems-module-breadcrumb-border);
+    border-radius: var(--eaduems-module-breadcrumb-radius);
+    color: var(--eaduems-module-breadcrumb-text);
+    font-size: var(--eaduems-module-breadcrumb-font-size);
+    font-weight: var(--eaduems-module-breadcrumb-font-weight);
+    line-height: var(--eaduems-module-breadcrumb-line-height);
+    margin: var(--eaduems-module-breadcrumb-margin);
+    padding: var(--eaduems-module-breadcrumb-padding);
+}
+
+body#page-mod-assign-view .breadcrumb .breadcrumb-item {
+    color: var(--eaduems-module-breadcrumb-text);
+    font-size: var(--eaduems-module-breadcrumb-font-size);
+    font-weight: var(--eaduems-module-breadcrumb-font-weight);
+    line-height: var(--eaduems-module-breadcrumb-line-height);
+    margin: var(--eaduems-module-breadcrumb-item-margin);
+    padding: var(--eaduems-module-breadcrumb-item-padding);
+}
+
+body#page-mod-assign-view .breadcrumb .breadcrumb-item:first-child {
+    padding: var(--eaduems-module-breadcrumb-first-item-padding);
+}
+
+body#page-mod-assign-view .breadcrumb .breadcrumb-item a {
+    color: var(--eaduems-module-breadcrumb-link);
+    font-size: var(--eaduems-module-breadcrumb-font-size);
+    font-weight: var(--eaduems-module-breadcrumb-font-weight);
+    line-height: var(--eaduems-module-breadcrumb-line-height);
+}

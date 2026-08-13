@@ -1,0 +1,100 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper" class="theme-eaduems-shell">
+    {{{ output.standard_top_of_body_html }}}
+
+    <div id="page" class="container-xl theme-eaduems-loginpage{{#show_institutional_panel}} theme-eaduems-loginpage--institutional{{/show_institutional_panel}}">
+        {{#show_institutional_panel}}
+        <aside class="theme-eaduems-loginpage__hero" aria-label="{{site_name}}">
+            {{#show_logo_watermark}}
+            {{#login_logo_url}}
+            <img class="theme-eaduems-loginpage__watermark" src="{{login_logo_url}}" alt="" aria-hidden="true">
+            {{/login_logo_url}}
+            {{/show_logo_watermark}}
+            {{#show_login_logo}}
+            {{#login_logo_url}}
+            <img class="theme-eaduems-loginpage__logo" src="{{login_logo_url}}" alt="{{site_name}}">
+            {{/login_logo_url}}
+            {{/show_login_logo}}
+            {{#show_login_institutional_eyebrow}}
+            <span class="theme-eaduems-loginpage__eyebrow">{{login_institutional_eyebrow}}</span>
+            {{/show_login_institutional_eyebrow}}
+            {{#show_login_institutional_title}}
+            <h1>{{login_institutional_title}}</h1>
+            {{/show_login_institutional_title}}
+            {{#show_login_institutional_intro}}
+            <p>{{login_institutional_intro}}</p>
+            {{/show_login_institutional_intro}}
+        </aside>
+        {{/show_institutional_panel}}
+        <div class="theme-eaduems-loginpage__form">
+            <a class="theme-eaduems-loginpage__home-link" href="{{home_url}}" aria-label="{{home_label}}" title="{{home_label}}">
+                <span class="fa fa-home" aria-hidden="true"></span>
+            </a>
+            <div class="theme-eaduems-loginpage__content">
+                {{{ output.main_content }}}
+                <nav class="theme-eaduems-loginpage__support" aria-label="{{login_support_label}}">
+                    <a href="{{login_support_url}}">
+                        <span class="fa fa-life-ring" aria-hidden="true"></span>
+                        {{login_support_label}}
+                    </a>
+                    {{#has_login_privacy_policy}}
+                    <a class="theme-eaduems-loginpage__support-policy" href="{{login_privacy_policy_url}}" onclick="var modal = document.getElementById('theme-eaduems-login-privacy-modal'); if (modal && typeof modal.showModal === 'function') { modal.showModal(); return false; }">
+                        <span class="fa fa-shield" aria-hidden="true"></span>
+                        {{login_privacy_label}}
+                    </a>
+                    {{/has_login_privacy_policy}}
+                    {{#has_login_terms_policy}}
+                    <a class="theme-eaduems-loginpage__support-policy" href="{{login_terms_policy_url}}" onclick="var modal = document.getElementById('theme-eaduems-login-terms-modal'); if (modal && typeof modal.showModal === 'function') { modal.showModal(); return false; }">
+                        <span class="fa fa-file-text-o" aria-hidden="true"></span>
+                        {{login_terms_label}}
+                    </a>
+                    {{/has_login_terms_policy}}
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {{#has_login_privacy_policy}}
+    <dialog id="theme-eaduems-login-privacy-modal" class="theme-eaduems-loginpage__legal-modal" aria-labelledby="theme-eaduems-login-privacy-title" onclick="if (event.target === this) { this.close(); }">
+        <div class="theme-eaduems-loginpage__legal-modal-header">
+            <h2 id="theme-eaduems-login-privacy-title">{{login_privacy_modal_title}}</h2>
+            <form method="dialog">
+                <button type="submit" class="theme-eaduems-loginpage__legal-modal-close" aria-label="{{login_modal_close_label}}">
+                    <span class="fa fa-times" aria-hidden="true"></span>
+                </button>
+            </form>
+        </div>
+        <div class="theme-eaduems-loginpage__legal-modal-content">{{{login_privacy_content}}}</div>
+    </dialog>
+    {{/has_login_privacy_policy}}
+
+    {{#has_login_terms_policy}}
+    <dialog id="theme-eaduems-login-terms-modal" class="theme-eaduems-loginpage__legal-modal" aria-labelledby="theme-eaduems-login-terms-title" onclick="if (event.target === this) { this.close(); }">
+        <div class="theme-eaduems-loginpage__legal-modal-header">
+            <h2 id="theme-eaduems-login-terms-title">{{login_terms_modal_title}}</h2>
+            <form method="dialog">
+                <button type="submit" class="theme-eaduems-loginpage__legal-modal-close" aria-label="{{login_modal_close_label}}">
+                    <span class="fa fa-times" aria-hidden="true"></span>
+                </button>
+            </form>
+        </div>
+        <div class="theme-eaduems-loginpage__legal-modal-content">{{{login_terms_content}}}</div>
+    </dialog>
+    {{/has_login_terms_policy}}
+
+    {{> theme_boost/footer }}
+</div>
+
+{{{ output.standard_end_of_body_html }}}
+</body>
+</html>
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+{{/js}}

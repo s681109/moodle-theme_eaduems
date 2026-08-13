@@ -1,0 +1,50 @@
+<header class="theme-eaduems-header">
+    <div class="theme-eaduems-header__brandbar">
+        <div class="container-xl theme-eaduems-header__inner">
+            <a class="theme-eaduems-brand" href="{{home_url}}">
+                {{#site_logo_url}}
+                <img class="theme-eaduems-brand__logo" src="{{site_logo_url}}" alt="{{site_name}}">
+                {{/site_logo_url}}
+                <span class="theme-eaduems-brand__text">
+                    <strong>{{site_name}}</strong>
+                    <span>{{site_tagline}}</span>
+                </span>
+            </a>
+
+            {{#isloggedin}}
+            <div class="theme-eaduems-header__actions">
+                <div class="theme-eaduems-usernav theme-eaduems-header__tools" id="usernavigation">
+                    {{> theme_eaduems/navigation/color_mode_toggle }}
+                    {{{navbarpluginoutput}}}
+                    <div class="theme-eaduems-header__usermenu d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                        {{#usermenu}}
+                            {{> core/user_menu }}
+                        {{/usermenu}}
+                    </div>
+                    {{{editswitch}}}
+                </div>
+            </div>
+            {{/isloggedin}}
+            {{^isloggedin}}
+            <div class="theme-eaduems-header__actions">
+                {{> theme_eaduems/navigation/color_mode_toggle }}
+                <a class="theme-eaduems-header__cta" href="{{login_url}}">{{login_label}}</a>
+                {{#showsignup}}
+                <a class="theme-eaduems-header__cta theme-eaduems-header__cta--secondary" href="{{signup_url}}">{{signup_label}}</a>
+                {{/showsignup}}
+            </div>
+            {{/isloggedin}}
+        </div>
+    </div>
+
+    <div class="theme-eaduems-header__navband" id="theme-eaduems-primary-nav">
+        <div class="container-xl theme-eaduems-header__navinner">
+            <nav class="theme-eaduems-nav" aria-label="{{#str}}mainnavigation, theme_eaduems{{/str}}">
+                {{#primary_links}}
+                <a class="theme-eaduems-nav__link" href="{{url}}">{{label}}</a>
+                {{/primary_links}}
+            </nav>
+        </div>
+    </div>
+</header>
+

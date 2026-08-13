@@ -1,0 +1,483 @@
+#page.theme-eaduems-loginpage {
+    align-items: stretch;
+    background: var(--eaduems-login-bg);
+    color: var(--eaduems-login-text);
+    display: grid !important;
+    gap: 0;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    margin: clamp(1.5rem, 5vw, 4rem) auto;
+    max-width: 76rem;
+    min-height: min(44rem, calc(100vh - 6rem));
+    overflow: hidden;
+    padding: 0;
+}
+
+.theme-eaduems-loginpage--institutional {
+    border: 1px solid var(--eaduems-login-panel-border);
+    border-radius: var(--eaduems-login-panel-radius);
+    box-shadow: var(--eaduems-login-panel-shadow);
+}
+
+.theme-eaduems-loginpage__hero {
+    background: var(--eaduems-login-hero-bg);
+    color: var(--eaduems-login-hero-text);
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    justify-content: center;
+    min-height: 100%;
+    overflow: hidden;
+    padding: clamp(2.5rem, 6vw, 5rem);
+    position: relative;
+}
+
+.theme-eaduems-loginpage__hero > :not(.theme-eaduems-loginpage__watermark) {
+    position: relative;
+    z-index: 1;
+}
+
+.theme-eaduems-loginpage__watermark {
+    bottom: 50%;
+    max-width: none;
+    opacity: var(--eaduems-login-watermark-opacity);
+    pointer-events: none;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 150%;
+    z-index: 0;
+}
+
+.theme-eaduems-loginpage:not(.theme-eaduems-loginpage--institutional) {
+    display: block;
+    max-width: 36rem;
+    min-height: 0;
+    overflow: visible;
+}
+
+.theme-eaduems-loginpage__eyebrow {
+    color: var(--eaduems-login-eyebrow);
+    display: inline-block;
+    font-size: var(--eaduems-login-eyebrow-size);
+    font-weight: var(--eaduems-login-eyebrow-weight);
+    letter-spacing: var(--eaduems-login-eyebrow-letter-spacing);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.theme-eaduems-loginpage__hero h1 {
+    color: inherit;
+    font-size: clamp(2.2rem, 4vw, 4.25rem);
+    font-weight: var(--eaduems-font-weight-extrabold);
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin: 0;
+    max-width: 9ch;
+}
+
+.theme-eaduems-loginpage__hero p {
+    border-top: 1px solid var(--eaduems-login-hero-border);
+    color: var(--eaduems-login-hero-muted);
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.6;
+    margin: 1.75rem 0 0;
+    max-width: 29rem;
+    padding-top: 1.5rem;
+}
+
+.theme-eaduems-loginpage__logo {
+    display: block;
+    height: 72px;
+    margin-bottom: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+.theme-eaduems-loginpage__form {
+    align-items: center;
+    background: var(--eaduems-login-form-bg);
+    color: var(--eaduems-login-panel-text);
+    display: flex;
+    min-width: 0;
+    padding: clamp(2rem, 5vw, 5rem);
+    position: relative;
+}
+
+.theme-eaduems-loginpage__home-link {
+    align-items: center;
+    border: 1px solid var(--eaduems-login-panel-border);
+    border-radius: 50%;
+    color: var(--eaduems-login-link);
+    display: inline-flex;
+    height: 2.5rem;
+    justify-content: center;
+    left: clamp(2rem, 5vw, 5rem);
+    position: absolute;
+    text-decoration: none;
+    top: clamp(1.25rem, 2vw, 2rem);
+    width: 2.5rem;
+}
+
+.theme-eaduems-loginpage__home-link:hover,
+.theme-eaduems-loginpage__home-link:focus {
+    background-color: var(--eaduems-color-primary);
+    border-color: var(--eaduems-color-primary);
+    color: var(--eaduems-color-text-inverse);
+}
+
+.theme-eaduems-loginpage__content {
+    max-width: 32rem;
+    width: 100%;
+}
+
+.theme-eaduems-loginpage__form .login-container {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--eaduems-login-panel-text);
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+}
+
+.theme-eaduems-loginpage__form .login-logo {
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.theme-eaduems-loginpage__form .login-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.theme-eaduems-loginpage__form .login-form-username,
+.theme-eaduems-loginpage__form .login-form-password {
+    flex: 0 0 100%;
+    margin-bottom: 0 !important;
+}
+
+.theme-eaduems-loginpage__form .login-form-submit,
+.theme-eaduems-loginpage__form .login-form-forgotpassword {
+    margin: 0 !important;
+}
+
+.theme-eaduems-loginpage:not(.theme-eaduems-loginpage--institutional) .theme-eaduems-loginpage__form {
+    background: transparent;
+    display: block;
+    padding: 0;
+}
+
+.theme-eaduems-loginpage:not(.theme-eaduems-loginpage--institutional) .theme-eaduems-loginpage__form .login-container {
+    background: var(--eaduems-login-panel-bg);
+    border: 1px solid var(--eaduems-login-panel-border);
+    border-radius: var(--eaduems-login-panel-radius);
+    box-shadow: var(--eaduems-login-panel-shadow);
+    padding: var(--eaduems-login-panel-padding);
+}
+
+.theme-eaduems-loginpage__form .login-container a {
+    color: var(--eaduems-login-link);
+}
+
+/* Native login blocks keep their own heading colors; bind them to the component surface. */
+.theme-eaduems-loginpage__form .login-container :is(h1, h2, h3, h4, h5, h6, p, label, legend, small) {
+    color: var(--eaduems-login-panel-text);
+}
+
+.theme-eaduems-loginpage__form .login-container .login-instructions,
+.theme-eaduems-loginpage__form .login-container .login-instructions p {
+    color: var(--eaduems-login-helper-text);
+}
+
+.theme-eaduems-loginpage__form .form-control {
+    background-color: var(--eaduems-form-control-bg);
+    border-color: var(--eaduems-form-control-border);
+    border-radius: var(--eaduems-form-control-radius);
+    color: var(--eaduems-form-control-text);
+    font-size: var(--eaduems-form-control-font-size);
+    font-weight: var(--eaduems-form-control-font-weight);
+    line-height: var(--eaduems-form-control-line-height);
+    padding: var(--eaduems-form-control-padding-y) var(--eaduems-form-control-padding-x);
+}
+
+.theme-eaduems-loginpage__form .form-control::placeholder {
+    color: var(--eaduems-login-field-placeholder);
+}
+
+.theme-eaduems-loginpage__form .form-control:focus {
+    background-color: var(--eaduems-form-control-bg);
+    border-color: var(--eaduems-form-control-focus-border);
+    box-shadow: 0 0 0 0.25rem var(--eaduems-form-control-focus-ring);
+    color: var(--eaduems-form-control-text);
+}
+
+/* The core form owns validation; the theme only gives each native state a semantic treatment. */
+.theme-eaduems-loginpage__form :is(.form-control, .btn, a):focus-visible {
+    box-shadow: 0 0 0 0.25rem var(--eaduems-login-focus-ring);
+    outline: 0;
+}
+
+.theme-eaduems-loginpage__form .form-control:is(.is-invalid, [aria-invalid="true"]) {
+    border-color: var(--eaduems-login-error-field-border);
+}
+
+.theme-eaduems-loginpage__form :is(#loginerrormessage, .login-maintenance.alert-danger) {
+    background-color: var(--eaduems-login-error-bg);
+    border-color: var(--eaduems-login-error-border);
+    color: var(--eaduems-login-error-text);
+}
+
+.theme-eaduems-loginpage__form .login-form-submit .btn:is(:disabled, .is-loading, [aria-busy="true"]) {
+    background-color: var(--eaduems-login-disabled-bg);
+    border-color: var(--eaduems-login-disabled-border);
+    color: var(--eaduems-login-disabled-text);
+    cursor: progress;
+    opacity: 1;
+}
+
+.theme-eaduems-loginpage__form #loginbtn {
+    border-radius: var(--eaduems-form-control-radius);
+    font-size: var(--eaduems-form-control-font-size);
+    font-weight: var(--eaduems-form-control-font-weight);
+    line-height: var(--eaduems-form-control-line-height);
+    padding: var(--eaduems-form-control-padding-y) var(--eaduems-form-control-padding-x);
+}
+
+.theme-eaduems-loginpage__form .login-instructions {
+    color: var(--eaduems-login-helper-text);
+    font-size: var(--eaduems-login-helper-font-size);
+    line-height: var(--eaduems-login-helper-line-height);
+}
+
+.theme-eaduems-loginpage__form .login-form-forgotpassword a {
+    align-items: center;
+    background-color: var(--eaduems-login-secondary-action-bg);
+    border: 1px solid var(--eaduems-login-secondary-action-border);
+    border-radius: var(--eaduems-login-secondary-action-radius);
+    color: var(--eaduems-login-secondary-action-text);
+    display: inline-flex;
+    font-size: var(--eaduems-login-helper-font-size);
+    font-weight: var(--eaduems-form-control-font-weight);
+    line-height: var(--eaduems-login-helper-line-height);
+    min-height: 100%;
+    padding: var(--eaduems-form-control-padding-y) var(--eaduems-form-control-padding-x);
+    text-decoration: none;
+}
+
+.theme-eaduems-loginpage__form .login-form-forgotpassword a:hover,
+.theme-eaduems-loginpage__form .login-form-forgotpassword a:focus {
+    background-color: var(--eaduems-login-secondary-action-hover-bg);
+    border-color: var(--eaduems-login-secondary-action-hover-bg);
+    color: var(--eaduems-login-secondary-action-text);
+}
+
+.theme-eaduems-loginpage__form .btn.btn-secondary,
+.theme-eaduems-loginpage__form #loginguestbtn {
+    background-color: var(--eaduems-login-secondary-action-bg) !important;
+    border-color: var(--eaduems-login-secondary-action-border) !important;
+    border-radius: var(--eaduems-login-secondary-action-radius);
+    color: var(--eaduems-login-secondary-action-text) !important;
+    font-size: var(--eaduems-login-secondary-action-font-size);
+    line-height: var(--eaduems-login-secondary-action-line-height);
+    padding: var(--eaduems-login-secondary-action-padding);
+}
+
+#page.theme-eaduems-loginpage button[data-modal="alert"][data-modal-title-str*="cookiesenabled"] {
+    background-color: var(--eaduems-login-secondary-action-bg);
+    border-color: var(--eaduems-login-secondary-action-border);
+    border-radius: var(--eaduems-login-secondary-action-radius);
+    color: var(--eaduems-login-secondary-action-text);
+    font-size: var(--eaduems-login-secondary-action-font-size);
+    line-height: var(--eaduems-login-secondary-action-line-height);
+    padding: var(--eaduems-login-secondary-action-padding);
+}
+
+.theme-eaduems-loginpage__form .btn.btn-secondary:hover,
+.theme-eaduems-loginpage__form .btn.btn-secondary:focus,
+.theme-eaduems-loginpage__form #loginguestbtn:hover,
+.theme-eaduems-loginpage__form #loginguestbtn:focus {
+    background-color: var(--eaduems-login-secondary-action-hover-bg) !important;
+    border-color: var(--eaduems-login-secondary-action-hover-bg) !important;
+    color: var(--eaduems-login-secondary-action-text) !important;
+}
+
+#page.theme-eaduems-loginpage button[data-modal="alert"][data-modal-title-str*="cookiesenabled"]:hover,
+#page.theme-eaduems-loginpage button[data-modal="alert"][data-modal-title-str*="cookiesenabled"]:focus {
+    background-color: var(--eaduems-login-secondary-action-hover-bg);
+    border-color: var(--eaduems-login-secondary-action-hover-bg);
+    color: var(--eaduems-login-secondary-action-text);
+}
+
+.theme-eaduems-loginpage__form .login-signup {
+    margin-top: 0.75rem;
+}
+
+.theme-eaduems-loginpage__form .login-form + .login-divider {
+    margin: 1.5rem 0;
+}
+
+.theme-eaduems-loginpage__form .login-signup + .login-divider {
+    margin: 2rem 0;
+}
+
+/* Keep the cookie action visually separate when Moodle hides the language menu. */
+.theme-eaduems-loginpage__form #guestlogin + .login-divider {
+    border-top: 0;
+    margin: 0;
+}
+
+.theme-eaduems-loginpage__form #guestlogin + .login-divider + .d-flex {
+    margin-top: 1.25rem;
+}
+
+.theme-eaduems-loginpage__support {
+    align-items: center;
+    color: var(--eaduems-login-helper-text);
+    display: flex;
+    font-size: var(--eaduems-login-helper-font-size);
+    gap: 0.45rem;
+    line-height: var(--eaduems-login-helper-line-height);
+    margin: 1.5rem 0 0;
+    flex-wrap: wrap;
+}
+
+.theme-eaduems-loginpage__support :is(a, button) {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--eaduems-login-helper-link);
+    display: inline-flex;
+    font-weight: var(--eaduems-font-weight-semibold);
+    gap: 0.35rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+// Separate institutional legal links from the support link without widening their own group.
+.theme-eaduems-loginpage__support > a + .theme-eaduems-loginpage__support-policy {
+    margin-left: 0.5rem;
+}
+
+.theme-eaduems-loginpage__support :is(a, button):hover,
+.theme-eaduems-loginpage__support :is(a, button):focus-visible {
+    color: var(--eaduems-login-helper-link-hover);
+}
+
+.theme-eaduems-loginpage__legal-modal {
+    background: var(--eaduems-login-panel-bg);
+    border: 1px solid var(--eaduems-login-panel-border);
+    border-radius: var(--eaduems-login-panel-radius);
+    box-shadow: var(--eaduems-login-panel-shadow);
+    color: var(--eaduems-login-panel-text);
+    max-height: min(42rem, calc(100vh - 3rem));
+    max-width: min(42rem, calc(100vw - 2rem));
+    padding: 0;
+    width: 100%;
+}
+
+.theme-eaduems-loginpage__legal-modal::backdrop {
+    background: rgba(4, 23, 15, 0.72);
+}
+
+.theme-eaduems-loginpage__legal-modal-header {
+    align-items: center;
+    border-bottom: 1px solid var(--eaduems-login-panel-border);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+}
+
+.theme-eaduems-loginpage__legal-modal-header h2 {
+    color: var(--eaduems-login-panel-text);
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.theme-eaduems-loginpage__legal-modal-close {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--eaduems-login-panel-border);
+    border-radius: 50%;
+    color: var(--eaduems-login-link);
+    display: inline-flex;
+    height: 2.25rem;
+    justify-content: center;
+    width: 2.25rem;
+}
+
+.theme-eaduems-loginpage__legal-modal-close:hover,
+.theme-eaduems-loginpage__legal-modal-close:focus-visible {
+    background: var(--eaduems-color-primary);
+    border-color: var(--eaduems-color-primary);
+    color: var(--eaduems-color-text-inverse);
+}
+
+.theme-eaduems-loginpage__legal-modal-content {
+    color: var(--eaduems-login-panel-text);
+    line-height: 1.6;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.theme-eaduems-loginpage__legal-modal-content :last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    #page.theme-eaduems-loginpage {
+        grid-template-columns: 1fr;
+        margin: 0;
+        max-width: none;
+        min-height: 100vh;
+    }
+
+    .theme-eaduems-loginpage--institutional {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .theme-eaduems-loginpage__hero {
+        min-height: 0;
+        padding: 2rem 1.5rem;
+    }
+
+    .theme-eaduems-loginpage__logo {
+        height: 48px;
+        margin-bottom: 2.5rem;
+        max-width: 180px;
+    }
+
+    .theme-eaduems-loginpage__hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        max-width: 12ch;
+    }
+
+    .theme-eaduems-loginpage__hero p {
+        font-size: 1rem;
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+    }
+
+    .theme-eaduems-loginpage__watermark {
+        bottom: 50%;
+        right: 50%;
+        width: 150%;
+    }
+
+    .theme-eaduems-loginpage__form {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .theme-eaduems-loginpage__home-link {
+        left: 1.5rem;
+    }
+
+    .theme-eaduems-loginpage__form .login-logo {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,76 @@
+<section class="theme-eaduems-section theme-eaduems-featured" id="{{sectionid}}" data-region="theme-eaduems-featured-carousel">
+    <div class="container-xl">
+        {{> theme_eaduems/components/section_header }}
+        <div class="theme-eaduems-card-surface">
+            <div class="theme-eaduems-card-rows theme-eaduems-card-rows--featured theme-eaduems-featured__pages">
+                {{#pages}}
+                <div id="theme-eaduems-featured-page-{{number}}" class="theme-eaduems-card-row theme-eaduems-card-row--featured theme-eaduems-featured__page" data-featured-page="{{index}}" aria-hidden="{{#isactive}}false{{/isactive}}{{^isactive}}true{{/isactive}}"{{^isactive}} hidden{{/isactive}}>
+                    {{#items}}
+                        {{> theme_eaduems/components/feature_card }}
+                    {{/items}}
+                </div>
+                {{/pages}}
+            </div>
+            {{#hasmultiplepages}}
+            <nav class="theme-eaduems-featured__pagination" aria-label="Navegacao dos destaques">
+                <button class="theme-eaduems-featured__arrow theme-eaduems-featured__arrow--prev" type="button" data-action="show-previous-featured-page" aria-label="Destaques anteriores" aria-controls="theme-eaduems-featured-page-1" disabled>
+                    <span aria-hidden="true">&#8249;</span>
+                </button>
+                <button class="theme-eaduems-featured__arrow theme-eaduems-featured__arrow--next" type="button" data-action="show-next-featured-page" aria-label="Proximos destaques" aria-controls="theme-eaduems-featured-page-1">
+                    <span aria-hidden="true">&#8250;</span>
+                </button>
+            </nav>
+            {{/hasmultiplepages}}
+        </div>
+    </div>
+</section>
+
+{{#js}}
+require([], function() {
+    document.querySelectorAll('[data-region="theme-eaduems-featured-carousel"]').forEach(function(carousel) {
+        if (carousel.dataset.featuredCarouselReady === 'true') { return; }
+        var pages = Array.prototype.slice.call(carousel.querySelectorAll('[data-featured-page]'));
+        var previous = carousel.querySelector('[data-action="show-previous-featured-page"]');
+        var next = carousel.querySelector('[data-action="show-next-featured-page"]');
+        var controls = [previous, next].filter(Boolean);
+        var current = 0;
+        var showPage = function(index) {
+            current = Math.max(0, Math.min(index, pages.length - 1));
+            pages.forEach(function(page, pageIndex) {
+                var active = pageIndex === current;
+                page.hidden = !active;
+                page.setAttribute('aria-hidden', active ? 'false' : 'true');
+            });
+            if (previous) {
+                previous.disabled = current === 0;
+                previous.setAttribute('aria-controls', pages[current].id);
+            }
+            if (next) {
+                next.disabled = current === pages.length - 1;
+                next.setAttribute('aria-controls', pages[current].id);
+            }
+        };
+        if (previous) {
+            previous.addEventListener('click', function() { showPage(current - 1); });
+        }
+        if (next) {
+            next.addEventListener('click', function() { showPage(current + 1); });
+        }
+        controls.forEach(function(control) {
+            control.addEventListener('keydown', function(event) {
+                if (event.key === 'ArrowRight') {
+                    event.preventDefault(); showPage(current + 1); next && next.focus();
+                } else if (event.key === 'ArrowLeft') {
+                    event.preventDefault(); showPage(current - 1); previous && previous.focus();
+                } else if (event.key === 'Home') {
+                    event.preventDefault(); showPage(0); previous && previous.focus();
+                } else if (event.key === 'End') {
+                    event.preventDefault(); showPage(pages.length - 1); next && next.focus();
+                }
+            });
+        });
+        showPage(current);
+        carousel.dataset.featuredCarouselReady = 'true';
+    });
+});
+{{/js}}

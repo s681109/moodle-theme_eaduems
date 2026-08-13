@@ -1,0 +1,31 @@
+$prefix: bs- !default;
+
+$eaduems-green: #0f6f3c !default;
+$eaduems-green-dark: #0b4f2b !default;
+$eaduems-surface: #f4f8f5 !default;
+$primary: $eaduems-green !default;
+$border-radius: .75rem !default;
+$border-radius-lg: .9rem !default;
+$link-decoration: none !default;
+
+@import "fontawesome";
+@import "bootstrap";
+@import "moodle";
+@import "tokens/light";
+@import "tokens/dark";
+@import "tokens/aliases";
+@import "tokens/semantic";
+@import "tokens/moodle_dark_compat";
+@import "components/header";
+@import "components/buttons";
+@import "components/hero";
+@import "components/carousel";
+@import "components/cards";
+@import "components/footer";
+@import "components/forms";
+@import "components/tables";
+@import "components/navigation";
+@import "components/feedback";
+@import "pages/frontpage";
+@import "pages/login";
+

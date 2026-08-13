@@ -1,0 +1,34 @@
+<section class="theme-eaduems-section theme-eaduems-hero">
+    <div class="container-xl">
+        <div class="theme-eaduems-hero__inner{{^panel}} theme-eaduems-hero__inner--single{{/panel}}">
+            <div class="theme-eaduems-hero__content">
+                <span class="theme-eaduems-hero__eyebrow">{{eyebrow}}</span>
+                <h1 class="theme-eaduems-hero__title">{{title}}</h1>
+                <p class="theme-eaduems-hero__intro">{{intro}}</p>
+                <div class="theme-eaduems-hero__actions">
+                    {{#primary_cta}}
+                    <a class="theme-eaduems-button theme-eaduems-button--primary" href="{{url}}">{{label}}</a>
+                    {{/primary_cta}}
+                    {{#secondary_cta}}
+                    <a class="theme-eaduems-button theme-eaduems-button--secondary" href="{{url}}">{{label}}</a>
+                    {{/secondary_cta}}
+                </div>
+            </div>
+
+            {{#panel}}
+            <aside class="theme-eaduems-hero__panel">
+                <span class="theme-eaduems-hero__panel-kicker">{{kicker}}</span>
+                <strong class="theme-eaduems-hero__panel-title">{{title}}</strong>
+                <p class="theme-eaduems-hero__panel-intro">{{intro}}</p>
+                {{#haspoints}}
+                <ul class="theme-eaduems-hero__panel-list">
+                    {{#points}}
+                    <li>{{text}}</li>
+                    {{/points}}
+                </ul>
+                {{/haspoints}}
+            </aside>
+            {{/panel}}
+        </div>
+    </div>
+</section>
