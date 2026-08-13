@@ -24,14 +24,15 @@
     font-size: clamp(2.5rem, 4.8vw, 4.25rem);
     font-weight: 800;
     max-width: none;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
+    white-space: normal;
 }
 
 .theme-eaduems-hero__inner--single .theme-eaduems-hero__intro {
     font-size: clamp(1.1rem, 1.25vw, 1.35rem);
     font-weight: 500;
     max-width: none;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .theme-eaduems-hero__content {
@@ -120,11 +121,4 @@
     left: 0;
     position: absolute;
     top: var(--eaduems-hero-panel-marker-top);
-}
-
-@media (max-width: 991.98px) {
-    .theme-eaduems-hero__inner--single .theme-eaduems-hero__title,
-    .theme-eaduems-hero__inner--single .theme-eaduems-hero__intro {
-        white-space: normal;
-    }
 }
