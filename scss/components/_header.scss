@@ -71,18 +71,17 @@
     gap: 0;
 }
 
+.theme-eaduems-header__navdesktop {
+    width: 100%;
+}
+
 .theme-eaduems-header__navmenu {
+    display: none;
     width: 100%;
 }
 
 .theme-eaduems-header__navmenu > summary {
     display: none;
-}
-
-@media (min-width: 992px) {
-    .theme-eaduems-header__navmenu .theme-eaduems-nav {
-        display: flex !important;
-    }
 }
 
 .theme-eaduems-nav__link {
@@ -450,6 +449,14 @@
         align-items: stretch;
         min-height: 0;
         padding: var(--eaduems-header-mobile-navinner-padding);
+    }
+
+    .theme-eaduems-header__navdesktop {
+        display: none;
+    }
+
+    .theme-eaduems-header__navmenu {
+        display: block;
     }
 
     .theme-eaduems-header__navmenu > summary {
