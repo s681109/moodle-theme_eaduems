@@ -97,6 +97,13 @@
     color: var(--eaduems-header-nav-link);
 }
 
+.theme-eaduems-nav__link.is-active {
+    background: rgba(214, 223, 42, .16);
+    box-shadow: inset 0 -4px 0 var(--eaduems-color-accent);
+    color: var(--eaduems-header-nav-link);
+    font-weight: 800;
+}
+
 .theme-eaduems-nav__link:focus-visible,
 .theme-eaduems-header__navmenu > summary:focus-visible {
     outline: 3px solid var(--eaduems-color-accent);

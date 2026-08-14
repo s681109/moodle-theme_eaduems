@@ -50,7 +50,7 @@ class context_builder {
             'navbarpluginoutput' => $isloggedin ? $output->navbar_plugin_output() : '',
             'usermenu' => self::value($primarymenu, 'user', false),
             'editswitch' => $isloggedin ? $output->edit_switch() : '',
-            'primary_links' => self::primary_links($primarymenu, $isloggedin),
+            'primary_links' => self::primary_links($primarymenu, $isloggedin, self::is_catalog_page($page)),
         ];
     }
 
@@ -100,7 +100,7 @@ class context_builder {
      * @param bool $isloggedin
      * @return array
      */
-    protected static function primary_links($primarymenu = [], bool $isloggedin = false): array {
+    protected static function primary_links($primarymenu = [], bool $isloggedin = false, bool $iscatalogpage = false): array {
         $configured = self::configured_primary_links($isloggedin);
         $links = $configured['configured'] ? $configured['links'] : self::default_primary_links();
 
@@ -108,7 +108,34 @@ class context_builder {
             $links = array_merge($links, self::native_primary_links($primarymenu, $links));
         }
 
+        foreach ($links as &$link) {
+            $link['isactive'] = $iscatalogpage && self::is_catalog_url((string) ($link['url'] ?? ''));
+        }
+        unset($link);
+
         return $links;
+    }
+
+    /**
+     * Checks whether the current request is a public catalog page.
+     *
+     * @param \moodle_page $page
+     * @return bool
+     */
+    protected static function is_catalog_page(\moodle_page $page): bool {
+        return strpos($page->url->get_path(), '/local/catalogo_eaduems/public/') === 0;
+    }
+
+    /**
+     * Checks whether a primary navigation URL points to the public catalog.
+     *
+     * @param string $url
+     * @return bool
+     */
+    protected static function is_catalog_url(string $url): bool {
+        $path = (string) parse_url($url, PHP_URL_PATH);
+
+        return strpos($path, '/local/catalogo_eaduems/public/') === 0;
     }
 
     /**
