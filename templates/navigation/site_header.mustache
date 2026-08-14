@@ -40,7 +40,10 @@
     <div class="theme-eaduems-header__navband" id="theme-eaduems-primary-nav">
         <div class="container-xl theme-eaduems-header__navinner">
             <details class="theme-eaduems-header__navmenu">
-                <summary>{{#str}}mobilemenu, theme_eaduems{{/str}}</summary>
+                <summary aria-label="{{#str}}mobilemenu, theme_eaduems{{/str}}">
+                    <span class="theme-eaduems-header__navmenu-icon" aria-hidden="true">&#9776;</span>
+                    <span class="visually-hidden">{{#str}}mobilemenu, theme_eaduems{{/str}}</span>
+                </summary>
                 <nav class="theme-eaduems-nav" aria-label="{{#str}}mainnavigation, theme_eaduems{{/str}}">
                     {{#primary_links}}
                     <a class="theme-eaduems-nav__link" href="{{url}}">{{label}}</a>
