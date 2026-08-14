@@ -71,6 +71,20 @@
     gap: 0;
 }
 
+.theme-eaduems-header__navmenu {
+    width: 100%;
+}
+
+.theme-eaduems-header__navmenu > summary {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .theme-eaduems-header__navmenu .theme-eaduems-nav {
+        display: flex !important;
+    }
+}
+
 .theme-eaduems-nav__link {
     color: var(--eaduems-header-nav-link);
     font-weight: 600;
@@ -82,6 +96,12 @@
 .theme-eaduems-nav__link:focus {
     background: var(--eaduems-header-nav-hover-bg);
     color: var(--eaduems-header-nav-link);
+}
+
+.theme-eaduems-nav__link:focus-visible,
+.theme-eaduems-header__navmenu > summary:focus-visible {
+    outline: 3px solid var(--eaduems-color-accent);
+    outline-offset: -3px;
 }
 
 .theme-eaduems-header__actions {
@@ -427,20 +447,50 @@
     }
 
     .theme-eaduems-header__navinner {
-        min-height: 3.25rem;
-        overflow-x: auto;
+        align-items: stretch;
+        min-height: 0;
         padding: var(--eaduems-header-mobile-navinner-padding);
-        scrollbar-width: thin;
     }
 
-    .theme-eaduems-nav {
-        flex-wrap: nowrap;
-        min-width: max-content;
+    .theme-eaduems-header__navmenu > summary {
+        align-items: center;
+        color: var(--eaduems-header-nav-link);
+        cursor: pointer;
+        display: flex;
+        font-weight: 700;
+        justify-content: space-between;
+        min-height: 3.25rem;
+        padding: 0 .8rem;
+    }
+
+    .theme-eaduems-header__navmenu > summary::after {
+        content: '\25be';
+        font-size: 1rem;
+        transition: transform 160ms ease;
+    }
+
+    .theme-eaduems-header__navmenu[open] > summary::after {
+        transform: rotate(180deg);
+    }
+
+    .theme-eaduems-header__navmenu > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .theme-eaduems-header__navmenu:not([open]) .theme-eaduems-nav {
+        display: none;
+    }
+
+    .theme-eaduems-header__navmenu[open] .theme-eaduems-nav {
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        display: flex;
+        flex-direction: column;
+        padding-bottom: .5rem;
     }
 
     .theme-eaduems-nav__link {
         padding: var(--eaduems-header-mobile-nav-link-padding);
-        white-space: nowrap;
+        white-space: normal;
     }
 }
 

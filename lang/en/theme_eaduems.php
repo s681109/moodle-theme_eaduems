@@ -236,3 +236,4 @@ $string['logintermsofuselnk'] = 'Terms of use';
 $string['loginprivacymodaltitle'] = 'Privacy';
 $string['logintermsofusemodaltitle'] = 'Terms of use';
 $string['loginmodalclose'] = 'Close';
+$string['mobilemenu'] = 'Menu';

@@ -143,6 +143,11 @@
     color: var(--eaduems-carousel-arrow-text);
 }
 
+.theme-eaduems-carousel__arrow:focus-visible {
+    outline: 3px solid var(--eaduems-color-accent);
+    outline-offset: 4px;
+}
+
 .theme-eaduems-carousel__arrow-icon {
     font-size: 5.5rem;
     font-weight: 300;
@@ -180,5 +185,32 @@
 
     .theme-eaduems-carousel__arrow--next {
         right: var(--eaduems-carousel-arrow-offset-mobile);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .theme-eaduems-carousel__item {
+        aspect-ratio: 4 / 5;
+    }
+
+    .theme-eaduems-carousel__overlay {
+        align-items: flex-end;
+    }
+
+    .theme-eaduems-carousel__panel {
+        max-width: 100%;
+    }
+
+    .theme-eaduems-carousel__panel h2 {
+        font-size: clamp(1.55rem, 8vw, 2.05rem);
+    }
+
+    .theme-eaduems-carousel__arrow {
+        height: 2.75rem;
+        width: 2.75rem;
+    }
+
+    .theme-eaduems-carousel__arrow-icon {
+        font-size: 3.2rem;
     }
 }

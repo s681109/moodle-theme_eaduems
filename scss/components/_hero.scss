@@ -23,7 +23,7 @@
 .theme-eaduems-hero__inner--single .theme-eaduems-hero__title {
     font-size: clamp(2.5rem, 4.8vw, 4.25rem);
     font-weight: 800;
-    max-width: none;
+    max-width: min(22ch, 100%);
     overflow-wrap: anywhere;
     white-space: normal;
 }
@@ -31,7 +31,7 @@
 .theme-eaduems-hero__inner--single .theme-eaduems-hero__intro {
     font-size: clamp(1.1rem, 1.25vw, 1.35rem);
     font-weight: 500;
-    max-width: none;
+    max-width: 68ch;
     white-space: normal;
 }
 
@@ -68,6 +68,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--eaduems-hero-actions-gap);
+}
+
+.theme-eaduems-hero :is(a, button):focus-visible {
+    outline: 3px solid var(--eaduems-color-accent);
+    outline-offset: 3px;
 }
 
 
