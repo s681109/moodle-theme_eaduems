@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_eaduems';
-$plugin->version = 2026081404;
-$plugin->release = '1.2.3';
+$plugin->version = 2026081700;
+$plugin->release = '1.3.0';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->requires = 2025092600;
 $plugin->dependencies = [

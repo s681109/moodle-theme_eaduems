@@ -1,0 +1,44 @@
+// Floating shortcut kept above Moodle's help widget in the lower-right corner.
+.theme-eaduems-back-to-top {
+    align-items: center;
+    background: var(--eaduems-brand-dark);
+    border: 1px solid var(--eaduems-brand-dark);
+    border-radius: .25rem;
+    bottom: max(5rem, calc(env(safe-area-inset-bottom) + 4rem));
+    box-shadow: 0 .35rem .9rem rgba(0, 0, 0, .2);
+    color: #fff;
+    display: inline-flex;
+    font-size: 1.25rem;
+    height: 3.25rem;
+    justify-content: center;
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, transform .15s ease-in-out;
+    width: 3.25rem;
+    z-index: 1045;
+
+    &:hover {
+        background: var(--eaduems-brand);
+        border-color: var(--eaduems-brand);
+        color: #fff;
+        transform: translateY(-.125rem);
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 .25rem rgba(214, 223, 42, .55);
+        outline: 0;
+    }
+
+    &[hidden] {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .theme-eaduems-back-to-top {
+        bottom: max(4.5rem, calc(env(safe-area-inset-bottom) + 3.5rem));
+        height: 3rem;
+        right: max(.75rem, env(safe-area-inset-right));
+        width: 3rem;
+    }
+}

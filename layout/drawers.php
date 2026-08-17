@@ -81,6 +81,7 @@ $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_action
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 
 $PAGE->requires->js(new moodle_url('/theme/eaduems/javascript/color_mode.js'));
+$PAGE->requires->js(new moodle_url('/theme/eaduems/javascript/back_to_top.js'));
 
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);

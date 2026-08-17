@@ -5,6 +5,8 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once(__DIR__ . '/../locallib.php');
 
+$PAGE->requires->js(new moodle_url('/theme/eaduems/javascript/back_to_top.js'));
+
 $policycontext = context_system::instance();
 $loginpolicies = [
     'privacy' => null,
